@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "【玩具開箱】1:18 台灣配音警車：孩子心中的正義小英雄"
-image: "/momo-evaluate/assets/images/police-car.jpg"
+image: "https://i.imgur.com/K12t3yv.jpg"
 ---
 
 ![]({{ page.image }})
@@ -15,10 +15,6 @@ image: "/momo-evaluate/assets/images/police-car.jpg"
 * **慣性行駛設計**：輕輕一推就能滑行很遠，簡單易上手，非常適合幼兒操作。
 
 ### 總結評分：⭐⭐⭐⭐⭐ (5/5)
-不僅是一個玩具，更是陪伴孩子角色扮演的好夥伴！
 
 ### 🔗 立即到 MOMO 查看優惠
 [👉 點擊此處前往 MOMO 購物網選購](https://s.momoshop.com.tw/s/hqVF1ecL)
-
----
-*參考資料：整合自親子社群推薦與 MOMO 商品說明，本站評測為客觀建議。*
