@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "【評測】電動升降電腦桌：在家辦公與電競的理想選擇"
+image: "https://i8.momoshop.com.tw/1777648962/goodsimg/TP000/8914/0005/080/TP00089140005080_R_m.jpg"
 ---
 
 ## 產品總覽
