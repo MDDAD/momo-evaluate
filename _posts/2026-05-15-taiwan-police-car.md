@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "【玩具開箱】1:18 台灣配音警車：孩子心中的正義小英雄"
-image: "https://i.imgur.com/K12t3yv.jpg"
+image: "{{ site.baseurl }}/assets/images/police-car.jpg"
 ---
 
-![]({{ page.image }})
+![]({{ site.baseurl }}/assets/images/police-car.jpg)
 
 ## 產品總覽
 這款 1:18 比例的台灣警車玩具，憑藉其逼真的「台灣小朋友配音」與閃爍的聲光效果，成為許多家長選購兒童玩具的首選。
