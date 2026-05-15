@@ -5,6 +5,10 @@
 <head><meta name="viewport" content="width=device-width, initial-scale=1"><style>body{font-family:sans-serif;padding:20px;line-height:1.6;}</style></head>
 <body>
   <a href="{{ site.baseurl | default: "/" }}/">← 回首頁</a>
+  <hr>
+  <h1>{{ page.title }}</h1>
   {{ content }}
+  <hr>
+  <p>參考資訊：<a href="{{ page.momo_link }}">點擊查看 MOMO 賣場</a></p>
 </body>
 </html>
