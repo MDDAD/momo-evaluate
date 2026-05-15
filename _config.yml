@@ -1,0 +1,5 @@
+title: MOMO好物評價網
+baseurl: "/momo-evaluate"
+url: "https://mddad.github.io"
+markdown: kramdown
+theme: minima

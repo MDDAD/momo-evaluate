@@ -1,0 +1,31 @@
+---
+layout: home
+---
+<h1>MOMO好物評價網</h1>
+<input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="搜尋商品名稱...">
+<div id="productGrid">
+  {% for post in site.posts %}
+    <div class="product-card">
+      <a href="{{ post.url | relative_url }}">
+        <h3>{{ post.title }}</h3>
+      </a>
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+function searchFunction() {
+  var input = document.getElementById("searchInput");
+  var filter = input.value.toUpperCase();
+  var grid = document.getElementById("productGrid");
+  var cards = grid.getElementsByClassName("product-card");
+  for (var i = 0; i < cards.length; i++) {
+    var title = cards[i].getElementsByTagName("h3")[0];
+    if (title.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+</script>
