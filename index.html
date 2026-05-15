@@ -2,19 +2,23 @@
 layout: home
 ---
 <style>
-  .product-card { border: 1px solid #ddd; padding: 15px; margin: 10px; border-radius: 8px; display: inline-block; width: 250px; vertical-align: top; text-align: center; }
-  .product-card img { width: 100%; height: 200px; object-fit: contain; border-radius: 4px; }
-  .product-card h3 { font-size: 16px; margin-top: 10px; color: #333; }
+  .product-row { display: flex; align-items: center; border: 1px solid #ddd; padding: 20px; margin-bottom: 20px; border-radius: 8px; }
+  .product-row img { width: 300px; height: 200px; object-fit: cover; border-radius: 4px; margin-right: 20px; }
+  .product-info { flex: 1; }
+  .product-info h3 { margin-top: 0; font-size: 22px; color: #333; }
 </style>
 
 <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="搜尋商品名稱..." style="width:100%; padding: 10px; margin-bottom: 20px;">
 <div id="productGrid">
-  {% for post in site.posts %}
-    <div class="product-card">
-      <a href="{{ post.url | relative_url }}">
-        <img src="{{ post.image }}" alt="{{ post.title }}">
-        <h3>{{ post.title }}</h3>
-      </a>
+  {% for post in site.posts reversed %}
+    <div class="product-row">
+      <img src="{{ post.image }}" alt="{{ post.title }}">
+      <div class="product-info">
+        <a href="{{ post.url | relative_url }}">
+          <h3>{{ post.title }}</h3>
+        </a>
+        <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+      </div>
     </div>
   {% endfor %}
 </div>
@@ -23,14 +27,13 @@ layout: home
 function searchFunction() {
   var input = document.getElementById("searchInput");
   var filter = input.value.toUpperCase();
-  var grid = document.getElementById("productGrid");
-  var cards = grid.getElementsByClassName("product-card");
-  for (var i = 0; i < cards.length; i++) {
-    var title = cards[i].getElementsByTagName("h3")[0];
+  var rows = document.getElementsByClassName("product-row");
+  for (var i = 0; i < rows.length; i++) {
+    var title = rows[i].getElementsByTagName("h3")[0];
     if (title.textContent.toUpperCase().indexOf(filter) > -1) {
-      cards[i].style.display = "";
+      rows[i].style.display = "";
     } else {
-      cards[i].style.display = "none";
+      rows[i].style.display = "none";
     }
   }
 }
