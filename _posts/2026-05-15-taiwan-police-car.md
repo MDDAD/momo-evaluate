@@ -2,7 +2,6 @@
 layout: post
 title: "【玩具開箱】1:18 台灣配音警車：孩子心中的正義小英雄"
 image: "https://img10.momoshop.com.tw/goodsimg/0013/112/668/13112668_L.jpg"
-momo_link: "https://s.momoshop.com.tw/s/hqVF1ecL"
 ---
 
 ![]({{ page.image }})
@@ -17,6 +16,9 @@ momo_link: "https://s.momoshop.com.tw/s/hqVF1ecL"
 
 ### 總結評分：⭐⭐⭐⭐⭐ (5/5)
 不僅是一個玩具，更是陪伴孩子角色扮演的好夥伴！
+
+### 🔗 立即到 MOMO 查看優惠
+[👉 點擊此處前往 MOMO 購物網選購](https://s.momoshop.com.tw/s/hqVF1ecL)
 
 ---
 *參考資料：整合自親子社群推薦與 MOMO 商品說明，本站評測為客觀建議。*
