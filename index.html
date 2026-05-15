@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,27 +21,17 @@
   <h1>AI 好物評價網</h1>
   <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="搜尋商品名稱...">
   <div id="productGrid">
-    
+    {% for post in site.posts reversed %}
       <div class="product-row">
-        <img src="https://i8.momoshop.com.tw/1769163801/goodsimg/TP000/6348/0000/417/TP00063480000417_R_m.jpg" alt="【深度評測】Lami Fans 140W GaN 氮化鎵四孔快充">
+        <img src="{{ post.image }}" alt="{{ post.title }}">
         <div class="product-info">
-          <a href="/2026/05/15/lami-fans-140w/" style="text-decoration:none;">
-            <h3>【深度評測】Lami Fans 140W GaN 氮化鎵四孔快充</h3>
+          <a href="{{ post.url | relative_url }}" style="text-decoration:none;">
+            <h3>{{ post.title }}</h3>
           </a>
-          <p>這款 Lami Fans 140W GaN 氮化鎵充电器，憑藉其高達 140W 的輸出功率與四孔設計，成為近期商務人士與筆電用戶的熱門關注商品。</p>
+          <p>{{ post.excerpt | strip_html | truncate: 60 }}</p>
         </div>
       </div>
-    
-      <div class="product-row">
-        <img src="https://i7.momoshop.com.tw/1723837157/expertimg/TP000/2179/0000/669/TP00021790000000_m_1_1.jpg" alt="【玩具開箱】1:18 台灣配音警車">
-        <div class="product-info">
-          <a href="/2026/05/15/taiwan-police-car/" style="text-decoration:none;">
-            <h3>【玩具開箱】1:18 台灣配音警車</h3>
-          </a>
-          <p>這款 1:18 比例的台灣警車玩具，憑藉其逼真的「台灣小朋友配音」與聲光效果，成為許多家長選購兒童玩具的首選。</p>
-        </div>
-      </div>
-    
+    {% endfor %}
   </div>
 
   <script>
