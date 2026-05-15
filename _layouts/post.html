@@ -2,8 +2,16 @@
 ---
 <!DOCTYPE html>
 <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: sans-serif; padding: 15px; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+  </style>
+</head>
 <body>
-  <a href="{{ site.baseurl }}/">回首頁</a>
+  <a href="{{ site.baseurl | default: "/" }}/">← 回首頁</a>
+  <hr>
   {{ content }}
 </body>
 </html>
