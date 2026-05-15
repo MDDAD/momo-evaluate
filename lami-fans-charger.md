@@ -1,5 +1,3 @@
-# 建立文章檔案
-cat <<EOF > lami-fans-charger.md
 ---
 title: "【評測】Lami Fans GaN氮化鎵 140W 四孔快充充電器：外出旅遊的充電神器？"
 date: 2026-05-15
@@ -20,9 +18,3 @@ Lami Fans 140W GaN 氮化鎵充電器是目前商務人士與極簡主義者的�
 
 ---
 *參考資料：整合自各大論壇討論與 MOMO 消費者回饋，本站評測為客觀建議。*
-EOF
-
-# 推送上傳
-git add lami-fans-charger.md
-git commit -m "Add new review: Lami Fans 140W Charger"
-git push origin main
