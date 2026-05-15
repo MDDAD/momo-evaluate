@@ -20,6 +20,6 @@ myFirst Camera AI 是一款專為小朋友設計的智慧相機，結合了 AI �
 * 「操作簡單，連3歲小孩都能自己拍照。」
 
 ### 立即到 MOMO 查看優惠
-[點擊此處前往 MOMO 購物網選購](https://s.momoshop.com.tw/s/AYM98gHT)
+[點擊此處前往 MOMO 購物網選購](https://s.momoshop.com.tw/s/AYM98gHT){: .shop-link}
 
 ![](https://i3.momoshop.com.tw/1743486512/goodsimg/0013/861/235/13861235_B.webp)

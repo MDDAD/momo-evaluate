@@ -21,6 +21,6 @@ image: "https://i8.momoshop.com.tw/1777648962/goodsimg/TP000/8914/0005/080/TP000
 * 「性價比高，比國外品牌的類似產品便宜很多。」
 
 ### 立即到 MOMO 查看優惠
-[點擊此處前往 MOMO 購物網選購](https://s.momoshop.com.tw/s/CRVscwQ5)
+[點擊此處前往 MOMO 購物網選購](https://s.momoshop.com.tw/s/CRVscwQ5){: .shop-link}
 
 ![](https://i8.momoshop.com.tw/1777648962/goodsimg/TP000/8914/0005/080/TP00089140005080_R_m.jpg)
