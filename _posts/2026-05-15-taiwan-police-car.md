@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "【玩具開箱】1:18 台灣配音警車：孩子心中的正義小英雄"
-image: "https://img10.momoshop.com.tw/goodsimg/0013/112/668/13112668_L.jpg"
+image: "/momo-evaluate/assets/images/police-car.jpg"
 ---
 
 ![]({{ page.image }})
