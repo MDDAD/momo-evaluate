@@ -1,42 +1,50 @@
 ---
-layout: home
+layout: null
 ---
-<style>
-  #productGrid { display: flex; flex-direction: column; }
-  .product-row { display: flex; align-items: flex-start; border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 8px; }
-  .product-row img { width: 80px; height: 80px; object-fit: cover; border-radius: 4px; margin-right: 15px; flex-shrink: 0; }
-  .product-info { flex: 1; min-width: 0; }
-  .product-info h3 { margin: 0 0 5px 0; font-size: 16px; color: #333; line-height: 1.2; }
-  .product-info p { margin: 0; font-size: 13px; color: #666; }
-</style>
-
-<input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="搜尋商品名稱..." style="width:100%; padding: 10px; margin-bottom: 20px;">
-<div id="productGrid">
-  {% for post in site.posts reversed %}
-    <div class="product-row">
-      <img src="{{ post.image }}" alt="{{ post.title }}">
-      <div class="product-info">
-        <a href="{{ post.url | relative_url }}" style="text-decoration:none;">
-          <h3>{{ post.title }}</h3>
-        </a>
-        <p>{{ post.excerpt | strip_html | truncate: 60 }}</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 好物評價網</title>
+  <style>
+    body { font-family: sans-serif; padding: 10px; }
+    .product-row { display: flex; align-items: flex-start; border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 8px; }
+    .product-row img { width: 80px; height: 80px; object-fit: cover; border-radius: 4px; margin-right: 15px; flex-shrink: 0; }
+    .product-info { flex: 1; min-width: 0; }
+    .product-info h3 { margin: 0 0 5px 0; font-size: 16px; color: #333; line-height: 1.2; }
+    .product-info p { margin: 0; font-size: 13px; color: #666; }
+  </style>
+</head>
+<body>
+  <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="搜尋商品名稱..." style="width:100%; padding: 10px; margin-bottom: 20px;">
+  <div id="productGrid">
+    {% for post in site.posts reversed %}
+      <div class="product-row">
+        <img src="{{ post.image }}" alt="{{ post.title }}">
+        <div class="product-info">
+          <a href="{{ post.url | relative_url }}" style="text-decoration:none;">
+            <h3>{{ post.title }}</h3>
+          </a>
+          <p>{{ post.excerpt | strip_html | truncate: 60 }}</p>
+        </div>
       </div>
-    </div>
-  {% endfor %}
-</div>
+    {% endfor %}
+  </div>
 
-<script>
-function searchFunction() {
-  var input = document.getElementById("searchInput");
-  var filter = input.value.toUpperCase();
-  var rows = document.getElementsByClassName("product-row");
-  for (var i = 0; i < rows.length; i++) {
-    var title = rows[i].getElementsByTagName("h3")[0];
-    if (title.textContent.toUpperCase().indexOf(filter) > -1) {
-      rows[i].style.display = "";
-    } else {
-      rows[i].style.display = "none";
+  <script>
+    function searchFunction() {
+      var input = document.getElementById("searchInput");
+      var filter = input.value.toUpperCase();
+      var rows = document.getElementsByClassName("product-row");
+      for (var i = 0; i < rows.length; i++) {
+        var title = rows[i].getElementsByTagName("h3")[0];
+        if (title.textContent.toUpperCase().indexOf(filter) > -1) {
+          rows[i].style.display = "";
+        } else {
+          rows[i].style.display = "none";
+        }
+      }
     }
-  }
-}
-</script>
+  </script>
+</body>
+</html>
