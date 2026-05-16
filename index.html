@@ -14,62 +14,103 @@ layout: null
 <body>
 
   <header class="site-header">
-    <div class="inner">
-      <div class="site-logo">AI 好物評價網 <span>評測・開箱・導購</span></div>
-    </div>
+    <div class="site-logo">AI 好物評價網 <span>評測・開箱・導購</span></div>
   </header>
 
-  <main class="container">
-    <h1 class="page-title">精選評測</h1>
-    <p class="page-subtitle">為你嚴選的生活好物，完整開箱與使用心得</p>
+  <div class="layout-main">
 
-    <div class="search-wrap">
-      <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="🔍 搜尋感興趣的商品...">
-    </div>
+    <!-- 左側分類欄 -->
+    <aside class="sidebar">
+      <p class="sidebar-title">商品分類</p>
+      <ul class="cat-list" id="catList">
+        <li><a href="#" class="active" data-cat="all">全部商品 <span class="count" id="count-all">4</span></a></li>
+        <li><a href="#" data-cat="3C">3C <span class="count">3</span></a></li>
+        <li><a href="#" data-cat="家電">家電 <span class="count">1</span></a></li>
+        <li><a href="#" data-cat="美妝個清">美妝個清 <span class="count">0</span></a></li>
+        <li><a href="#" data-cat="保健/食品">保健/食品 <span class="count">0</span></a></li>
+        <li><a href="#" data-cat="流行時尚">流行時尚 <span class="count">0</span></a></li>
+        <li><a href="#" data-cat="精品配飾">精品配飾 <span class="count">0</span></a></li>
+        <li><a href="#" data-cat="母嬰用品">母嬰用品 <span class="count">0</span></a></li>
+        <li><a href="#" data-cat="圖書文具">圖書文具 <span class="count">0</span></a></li>
+        <li><a href="#" data-cat="傢寢運動">傢寢運動 <span class="count">0</span></a></li>
+        <li><a href="#" data-cat="日用生活">日用生活 <span class="count">0</span></a></li>
+        <li><a href="#" data-cat="旅遊戶外">旅遊戶外 <span class="count">0</span></a></li>
+      </ul>
+    </aside>
 
-    <div id="productGrid" class="product-grid">
-      {% for post in site.posts %}
-        <div class="product-card">
-          <a href="{{ post.url | relative_url }}">
-            <img class="product-card-img" src="{{ post.image }}" alt="{{ post.title }}">
-            <div class="product-card-body">
-              <h2 class="product-card-title">{{ post.title }}</h2>
-              <p class="product-card-excerpt">{{ post.excerpt | strip_html | truncate: 80 }}</p>
-              <span class="product-card-more">看完整評測</span>
-            </div>
-          </a>
+    <!-- 右側商品區 -->
+    <section class="main-content">
+      <h1 class="page-title">精選評測</h1>
+      <p class="page-subtitle">為你嚴選的生活好物，完整開箱與使用心得</p>
+
+      <div class="search-wrap">
+        <input type="text" id="searchInput" placeholder="🔍 搜尋感興趣的商品...">
+      </div>
+
+      <div id="productGrid" class="product-grid">
+        {% for post in site.posts %}
+          <div class="product-card" data-cat="{{ post.category | default: '3C' }}">
+            <a href="{{ post.url | relative_url }}">
+              <img class="product-card-img" src="{{ post.image }}" alt="{{ post.title }}">
+              <div class="product-card-body">
+                <h2 class="product-card-title">{{ post.title }}</h2>
+                <p class="product-card-excerpt">{{ post.excerpt | strip_html | truncate: 70 }}</p>
+                <span class="product-card-cat">{{ post.category | default: '3C' }}</span>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+        <div id="noResults" class="no-results" style="display:none;">
+          找不到符合的商品，試試其他關鍵字 🙂
         </div>
-      {% endfor %}
-    </div>
+      </div>
+    </section>
 
-    <div id="noResults" class="no-results" style="display:none;">
-      找不到符合的商品，試試其他關鍵字 🙂
-    </div>
-  </main>
+  </div>
 
   <footer class="site-footer">
     <p>AI 好物評價網 — 透過 <a href="https://momo.com">MOMO 購物網</a> 發現好物</p>
   </footer>
 
   <script>
-    function searchFunction() {
-      var input = document.getElementById("searchInput");
-      var filter = input.value.toUpperCase();
-      var cards = document.getElementsByClassName("product-card");
+    // 搜尋功能
+    var searchInput = document.getElementById('searchInput');
+    var cards = document.getElementsByClassName('product-card');
+    var noResults = document.getElementById('noResults');
+
+    searchInput.addEventListener('keyup', filterCards);
+
+    function filterCards() {
+      var filter = searchInput.value.toUpperCase();
       var visible = 0;
       for (var i = 0; i < cards.length; i++) {
-        var title = cards[i].getElementsByClassName("product-card-title")[0];
-        var excerpt = cards[i].getElementsByClassName("product-card-excerpt")[0];
-        var txt = title.textContent + " " + excerpt.textContent;
-        if (txt.toUpperCase().indexOf(filter) > -1) {
-          cards[i].style.display = "";
+        var title = cards[i].getElementsByClassName('product-card-title')[0];
+        var excerpt = cards[i].getElementsByClassName('product-card-excerpt')[0];
+        var txt = (title.textContent + ' ' + excerpt.textContent).toUpperCase();
+        var cat = cards[i].getAttribute('data-cat');
+        var catActive = document.querySelector('.cat-list a.active').getAttribute('data-cat');
+        var catMatch = (catActive === 'all' || catActive === cat);
+        var searchMatch = (filter === '' || txt.indexOf(filter) > -1);
+        if (catMatch && searchMatch) {
+          cards[i].style.display = '';
           visible++;
         } else {
-          cards[i].style.display = "none";
+          cards[i].style.display = 'none';
         }
       }
-      document.getElementById("noResults").style.display = (visible === 0) ? "block" : "none";
+      noResults.style.display = (visible === 0) ? 'block' : 'none';
     }
+
+    // 分類點擊功能
+    var catLinks = document.querySelectorAll('.cat-list a');
+    catLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        catLinks.forEach(function(l) { l.classList.remove('active'); });
+        this.classList.add('active');
+        filterCards();
+      });
+    });
   </script>
 
 </body>

@@ -2,6 +2,7 @@
 layout: post
 title: "【玩具開箱】1:18 台灣配音警車"
 image: "https://res.cloudinary.com/dplxqsfc1/image/fetch/w_300,f_auto,q_auto/https://i7.momoshop.com.tw/1723837157/expertimg/TP000/2179/0000/669/TP00021790000000_m_1_1.jpg"
+category: 3C
 ---
 
 ## 產品總覽

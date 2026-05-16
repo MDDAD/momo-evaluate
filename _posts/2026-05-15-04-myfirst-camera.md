@@ -2,6 +2,7 @@
 layout: post
 title: "【開箱】myFirst Camera AI智慧兒童相機：孩子的第一台創作利器"
 image: "https://i3.momoshop.com.tw/1743486512/goodsimg/0013/861/235/13861235_B.webp"
+category: 3C
 ---
 
 ## 產品總覽
