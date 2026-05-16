@@ -19,7 +19,7 @@ layout: null
 
   <div class="layout-main">
 
-    <!-- 左側分類欄 -->
+    <!-- 左側分類欄（20%） -->
     <aside class="sidebar">
       <p class="sidebar-title">商品分類</p>
       <ul class="cat-list" id="catList">
@@ -43,19 +43,41 @@ layout: null
       <h1 class="page-title">精選評測</h1>
       <p class="page-subtitle">為你嚴選的生活好物，完整開箱與使用心得</p>
 
+      <!-- 桌面版搜尋 -->
       <div class="search-wrap">
         <input type="text" id="searchInput" placeholder="🔍 搜尋感興趣的商品...">
       </div>
 
+      <!-- 手機版：搜尋 + 分類下拉 -->
+      <div class="search-filter-bar">
+        <input type="text" id="searchInput-mobile" placeholder="🔍 搜尋商品...">
+        <select id="catSelect-mobile">
+          <option value="all">全部 (4)</option>
+          <option value="3C">3C (3)</option>
+          <option value="家電">家電 (1)</option>
+          <option value="美妝個清">美妝個清 (0)</option>
+          <option value="保健/食品">保健/食品 (0)</option>
+          <option value="流行時尚">流行時尚 (0)</option>
+          <option value="精品配飾">精品配飾 (0)</option>
+          <option value="母嬰用品">母嬰用品 (0)</option>
+          <option value="圖書文具">圖書文具 (0)</option>
+          <option value="傢寢運動">傢寢運動 (0)</option>
+          <option value="日用生活">日用生活 (0)</option>
+          <option value="旅遊戶外">旅遊戶外 (0)</option>
+        </select>
+      </div>
+
+      <!-- 商品網格 -->
       <div id="productGrid" class="product-grid">
         {% for post in site.posts %}
           <div class="product-card" data-cat="{{ post.category | default: '3C' }}">
             <a href="{{ post.url | relative_url }}">
-              <img class="product-card-img" src="{{ post.image }}" alt="{{ post.title }}">
+              <div class="product-card-img-wrap">
+                <img class="product-card-img" src="{{ post.image }}" alt="{{ post.title }}">
+              </div>
               <div class="product-card-body">
                 <h2 class="product-card-title">{{ post.title }}</h2>
-                <p class="product-card-excerpt">{{ post.excerpt | strip_html | truncate: 70 }}</p>
-                <span class="product-card-cat">{{ post.category | default: '3C' }}</span>
+                <div class="product-card-price">→ 查看優惠</div>
               </div>
             </a>
           </div>
@@ -73,24 +95,36 @@ layout: null
   </footer>
 
   <script>
-    // 搜尋功能
-    var searchInput = document.getElementById('searchInput');
     var cards = document.getElementsByClassName('product-card');
     var noResults = document.getElementById('noResults');
 
-    searchInput.addEventListener('keyup', filterCards);
+    // 取得目前作用中的分類
+    function getActiveCat() {
+      var active = document.querySelector('.cat-list a.active');
+      return active ? active.getAttribute('data-cat') : 'all';
+    }
 
-    function filterCards() {
-      var filter = searchInput.value.toUpperCase();
+    // 合併過濾（分類 + 搜尋）
+    function filterAll() {
+      var filter = '';
+      // 抓目前顯示中的搜尋框
+      var si = document.getElementById('searchInput');
+      var siMob = document.getElementById('searchInput-mobile');
+      var searchEl = (si && si.offsetParent !== null) ? si : siMob;
+      if (searchEl) filter = searchEl.value.toUpperCase();
+
+      var catActive = getActiveCat();
+      var mobileCat = document.getElementById('catSelect-mobile');
+      if (mobileCat && mobileCat.offsetParent !== null) {
+        catActive = mobileCat.value;
+      }
+
       var visible = 0;
       for (var i = 0; i < cards.length; i++) {
         var title = cards[i].getElementsByClassName('product-card-title')[0];
-        var excerpt = cards[i].getElementsByClassName('product-card-excerpt')[0];
-        var txt = (title.textContent + ' ' + excerpt.textContent).toUpperCase();
         var cat = cards[i].getAttribute('data-cat');
-        var catActive = document.querySelector('.cat-list a.active').getAttribute('data-cat');
         var catMatch = (catActive === 'all' || catActive === cat);
-        var searchMatch = (filter === '' || txt.indexOf(filter) > -1);
+        var searchMatch = (filter === '' || title.textContent.toUpperCase().indexOf(filter) > -1);
         if (catMatch && searchMatch) {
           cards[i].style.display = '';
           visible++;
@@ -101,14 +135,23 @@ layout: null
       noResults.style.display = (visible === 0) ? 'block' : 'none';
     }
 
-    // 分類點擊功能
+    // 綁定事件
+    var searchInput = document.getElementById('searchInput');
+    var searchInputMobile = document.getElementById('searchInput-mobile');
+    var catSelectMobile = document.getElementById('catSelect-mobile');
+
+    if (searchInput) searchInput.addEventListener('keyup', filterAll);
+    if (searchInputMobile) searchInputMobile.addEventListener('keyup', filterAll);
+    if (catSelectMobile) catSelectMobile.addEventListener('change', filterAll);
+
+    // 左側分類點擊
     var catLinks = document.querySelectorAll('.cat-list a');
     catLinks.forEach(function(link) {
       link.addEventListener('click', function(e) {
         e.preventDefault();
         catLinks.forEach(function(l) { l.classList.remove('active'); });
         this.classList.add('active');
-        filterCards();
+        filterAll();
       });
     });
   </script>
