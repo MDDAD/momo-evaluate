@@ -1,12 +1,43 @@
 ---
 ---
 <!DOCTYPE html>
-<html>
-<head><meta name="viewport" content="width=device-width, initial-scale=1"><style>body{font-family:sans-serif;padding:20px;line-height:1.6;}.shop-link{font-size:1.35em;font-weight:bold;display:inline-block;padding:8px 16px;background:#f2801f;color:#fff;border-radius:6px;text-decoration:none;}.shop-link:hover{background:#d66a10;}</style></head>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} — AI 好物評價網</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+</head>
 <body>
-  <a href="{{ site.baseurl | default: "/" }}/">← 回首頁</a>
-  <hr>
-  <h1>{{ page.title }}</h1>
-  {{ content }}
+
+  <header class="site-header">
+    <div class="inner">
+      <a href="{{ site.baseurl | default: '/' }}/" class="site-logo">AI 好物評價網 <span>評測・開箱・導購</span></a>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="{{ site.baseurl | default: '/' }}/" class="back-link">← 回首頁</a>
+
+    <article>
+      <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        {% if page.date %}
+        <p class="post-meta">發布於 {{ page.date | date: "%Y/%m/%d" }}</p>
+        {% endif %}
+      </header>
+
+      <div class="post-content">
+        {{ content }}
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>AI 好物評價網 — 透過<a href="https://momo.com"> MOMO 購物網</a>發現好物</p>
+  </footer>
+
 </body>
 </html>
