@@ -16,22 +16,22 @@
     <div class="site-logo">AI 好物評價網 <span>評測・開箱・導購</span></div>
   </header>
 
-  <div class="layout-main">
-    <section class="main-content" style="max-width:900px;margin:0 auto;">
+  <div class="post-layout">
+    <a href="{{ site.baseurl | default: '/' }}/" class="back-link">← 回首頁</a>
 
-      <a href="{{ site.baseurl | default: '/' }}/" style="display:inline-flex;align-items:center;gap:6px;font-size:0.88rem;color:var(--text-secondary);margin-bottom:20px;transition:0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-secondary)'">← 回首頁</a>
-
+    <article>
       <header class="post-header">
         {% if page.category %}<span class="post-cat-tag">{{ page.category }}</span>{% endif %}
         <h1 class="post-title">{{ page.title }}</h1>
         {% if page.date %}<p class="post-meta">發布於 {{ page.date | date: "%Y/%m/%d" }}</p>{% endif %}
       </header>
 
-      <div class="post-content-wrap">
-        {{ content }}
+      <div class="post-content-inner">
+        <div class="post-content-wrap">
+          {{ content }}
+        </div>
       </div>
-
-    </section>
+    </article>
   </div>
 
   <footer class="site-footer">

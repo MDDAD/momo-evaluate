@@ -17,143 +17,59 @@ layout: null
     <div class="site-logo">AI 好物評價網 <span>評測・開箱・導購</span></div>
   </header>
 
-  <div class="layout-main">
+  <main class="container">
+    <h1 class="page-title">精選評測</h1>
+    <p class="page-subtitle">為你嚴選的生活好物，完整開箱與使用心得</p>
 
-    <!-- 左側分類欄（20%） -->
-    <aside class="sidebar">
-      <p class="sidebar-title">商品分類</p>
-      <ul class="cat-list" id="catList">
-        <li><a href="#" class="active" data-cat="all">全部商品 <span class="count">(4)</span></a></li>
-        <li><a href="#" data-cat="3C"><span class="cat-name">3C</span> <span class="count">(3)</span></a></li>
-        <li><a href="#" data-cat="家電"><span class="cat-name">家電</span> <span class="count">(1)</span></a></li>
-        <li><a href="#" data-cat="美妝個清"><span class="cat-name">美妝個清</span> <span class="count">(0)</span></a></li>
-        <li><a href="#" data-cat="保健/食品"><span class="cat-name">保健/食品</span> <span class="count">(0)</span></a></li>
-        <li><a href="#" data-cat="流行時尚"><span class="cat-name">流行時尚</span> <span class="count">(0)</span></a></li>
-        <li><a href="#" data-cat="精品配飾"><span class="cat-name">精品配飾</span> <span class="count">(0)</span></a></li>
-        <li><a href="#" data-cat="母嬰用品"><span class="cat-name">母嬰用品</span> <span class="count">(0)</span></a></li>
-        <li><a href="#" data-cat="圖書文具"><span class="cat-name">圖書文具</span> <span class="count">(0)</span></a></li>
-        <li><a href="#" data-cat="傢寢運動"><span class="cat-name">傢寢運動</span> <span class="count">(0)</span></a></li>
-        <li><a href="#" data-cat="日用生活"><span class="cat-name">日用生活</span> <span class="count">(0)</span></a></li>
-        <li><a href="#" data-cat="旅遊戶外"><span class="cat-name">旅遊戶外</span> <span class="count">(0)</span></a></li>
-      </ul>
-    </aside>
+    <div class="search-wrap">
+      <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="🔍 搜尋感興趣的商品...">
+    </div>
 
-    <!-- 右側商品區 -->
-    <section class="main-content">
-      <h1 class="page-title">精選評測</h1>
-      <p class="page-subtitle">為你嚴選的生活好物，完整開箱與使用心得</p>
-
-      <!-- 桌面版搜尋 -->
-      <div class="search-wrap">
-        <input type="text" id="searchInput" placeholder="🔍 搜尋感興趣的商品...">
-      </div>
-
-      <!-- 手機版：搜尋 + 分類下拉 -->
-      <div class="search-filter-bar">
-        <input type="text" id="searchInput-mobile" placeholder="🔍 搜尋商品...">
-        <select id="catSelect-mobile">
-          <option value="all">全部 (4)</option>
-          <option value="3C">3C (3)</option>
-          <option value="家電">家電 (1)</option>
-          <option value="美妝個清">美妝個清 (0)</option>
-          <option value="保健/食品">保健/食品 (0)</option>
-          <option value="流行時尚">流行時尚 (0)</option>
-          <option value="精品配飾">精品配飾 (0)</option>
-          <option value="母嬰用品">母嬰用品 (0)</option>
-          <option value="圖書文具">圖書文具 (0)</option>
-          <option value="傢寢運動">傢寢運動 (0)</option>
-          <option value="日用生活">日用生活 (0)</option>
-          <option value="旅遊戶外">旅遊戶外 (0)</option>
-        </select>
-      </div>
-
-      <!-- 商品網格 -->
-      <div id="productGrid" class="product-grid">
-        {% for post in site.posts %}
-          <div class="product-card" data-cat="{{ post.category | default: '3C' }}">
+    <div id="productGrid">
+      {% for post in site.posts %}
+        <div class="product-row">
+          <a href="{{ post.url | relative_url }}">
+            <img class="product-row-img" src="{{ post.image }}" alt="{{ post.title }}">
+          </a>
+          <div class="product-row-info">
             <a href="{{ post.url | relative_url }}">
-              <div class="product-card-img-wrap">
-                <img class="product-card-img" src="{{ post.image }}" alt="{{ post.title }}">
-              </div>
-              <div class="product-card-body">
-                <h2 class="product-card-title">{{ post.title }}</h2>
-                <div class="product-card-price">→ 查看優惠</div>
-              </div>
+              <h3 class="product-row-title">{{ post.title }}</h3>
             </a>
+            <p class="product-row-excerpt">{{ post.excerpt | strip_html | truncate: 80 }}</p>
+            {% if post.category %}<span class="product-row-cat">{{ post.category }}</span>{% endif %}
           </div>
-        {% endfor %}
-        <div id="noResults" class="no-results" style="display:none;">
-          找不到符合的商品，試試其他關鍵字 🙂
         </div>
-      </div>
-    </section>
+      {% endfor %}
+    </div>
 
-  </div>
+    <div id="noResults" class="no-results" style="display:none;">
+      找不到符合的商品，試試其他關鍵字 🙂
+    </div>
+  </main>
 
   <footer class="site-footer">
     <p>AI 好物評價網 — 透過 <a href="https://momo.com">MOMO 購物網</a> 發現好物</p>
   </footer>
 
   <script>
-    var cards = document.getElementsByClassName('product-card');
-    var noResults = document.getElementById('noResults');
-
-    // 取得目前作用中的分類
-    function getActiveCat() {
-      var active = document.querySelector('.cat-list a.active');
-      return active ? active.getAttribute('data-cat') : 'all';
-    }
-
-    // 合併過濾（分類 + 搜尋）
-    function filterAll() {
-      var filter = '';
-      // 抓目前顯示中的搜尋框
-      var si = document.getElementById('searchInput');
-      var siMob = document.getElementById('searchInput-mobile');
-      var searchEl = (si && si.offsetParent !== null) ? si : siMob;
-      if (searchEl) filter = searchEl.value.toUpperCase();
-
-      var catActive = getActiveCat();
-      var mobileCat = document.getElementById('catSelect-mobile');
-      if (mobileCat && mobileCat.offsetParent !== null) {
-        catActive = mobileCat.value;
-      }
-
+    function searchFunction() {
+      var input = document.getElementById("searchInput");
+      var filter = input.value.toUpperCase();
+      var rows = document.getElementsByClassName("product-row");
       var visible = 0;
-      for (var i = 0; i < cards.length; i++) {
-        var title = cards[i].getElementsByClassName('product-card-title')[0];
-        var cat = cards[i].getAttribute('data-cat');
-        var catMatch = (catActive === 'all' || catActive === cat);
-        var searchMatch = (filter === '' || title.textContent.toUpperCase().indexOf(filter) > -1);
-        if (catMatch && searchMatch) {
-          cards[i].style.display = '';
+      for (var i = 0; i < rows.length; i++) {
+        var title = rows[i].getElementsByClassName("product-row-title")[0];
+        var excerpt = rows[i].getElementsByClassName("product-row-excerpt")[0];
+        var txt = (title.textContent + " " + excerpt.textContent).toUpperCase();
+        if (txt.indexOf(filter) > -1) {
+          rows[i].style.display = "";
           visible++;
         } else {
-          cards[i].style.display = 'none';
+          rows[i].style.display = "none";
         }
       }
-      noResults.style.display = (visible === 0) ? 'block' : 'none';
+      document.getElementById("noResults").style.display = (visible === 0) ? "block" : "none";
     }
-
-    // 綁定事件
-    var searchInput = document.getElementById('searchInput');
-    var searchInputMobile = document.getElementById('searchInput-mobile');
-    var catSelectMobile = document.getElementById('catSelect-mobile');
-
-    if (searchInput) searchInput.addEventListener('keyup', filterAll);
-    if (searchInputMobile) searchInputMobile.addEventListener('keyup', filterAll);
-    if (catSelectMobile) catSelectMobile.addEventListener('change', filterAll);
-
-    // 左側分類點擊
-    var catLinks = document.querySelectorAll('.cat-list a');
-    catLinks.forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        catLinks.forEach(function(l) { l.classList.remove('active'); });
-        this.classList.add('active');
-        filterAll();
-      });
-    });
   </script>
 
 </body>
