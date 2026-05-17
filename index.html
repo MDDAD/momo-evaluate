@@ -15,11 +15,16 @@ layout: null
     .product-info { flex: 1; min-width: 0; }
     .product-info h3 { margin: 0 0 5px 0; font-size: 16px; color: #333; }
     .product-info p { margin: 0; font-size: 13px; color: #666; }
+    .pagination { display: flex; justify-content: center; align-items: center; margin-top: 20px; gap: 8px; }
+    .pagination button { padding: 6px 14px; border: 1px solid #ccc; background: #fff; cursor: pointer; border-radius: 4px; }
+    .pagination button:disabled { opacity: 0.4; cursor: not-allowed; }
+    .pagination button.active { background: #007bff; color: #fff; border-color: #007bff; }
+    .page-info { color: #666; font-size: 13px; }
   </style>
 </head>
 <body>
   <h1>AI 好物評價網</h1>
-  <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="搜尋商品名稱...">
+  <input type="text" id="searchInput" onkeyup="onSearch()" placeholder="搜尋商品名稱...">
   <div id="productGrid">
     {% for post in site.posts %}
       <div class="product-row">
@@ -34,20 +39,75 @@ layout: null
     {% endfor %}
   </div>
 
+  <div class="pagination">
+    <button id="prevBtn" onclick="changePage(-1)" disabled>上一頁</button>
+    <span class="page-info" id="pageInfo">第 1 / 1 頁</span>
+    <button id="nextBtn" onclick="changePage(1)">下一頁</button>
+  </div>
+
   <script>
-    function searchFunction() {
-      var input = document.getElementById("searchInput");
-      var filter = input.value.toUpperCase();
-      var rows = document.getElementsByClassName("product-row");
-      for (var i = 0; i < rows.length; i++) {
-        var title = rows[i].getElementsByTagName("h3")[0];
-        if (title.textContent.toUpperCase().indexOf(filter) > -1) {
-          rows[i].style.display = "";
-        } else {
-          rows[i].style.display = "none";
-        }
-      }
+    var ROWS_PER_PAGE = 10;
+    var rows = Array.from(document.getElementsByClassName("product-row"));
+    var currentPage = 1;
+    var searchActive = false;
+
+    function getVisibleRows() {
+      if (!searchActive) return rows;
+      return rows.filter(function(r){ return r.style.display !== "none"; });
     }
+
+    function showPage(page) {
+      var visible = getVisibleRows();
+      var totalPages = Math.max(1, Math.ceil(visible.length / ROWS_PER_PAGE));
+      if (page < 1) page = 1;
+      if (page > totalPages) page = totalPages;
+      currentPage = page;
+
+      var start = (page - 1) * ROWS_PER_PAGE;
+      var end = start + ROWS_PER_PAGE;
+
+      // Hide all first
+      rows.forEach(function(r){ r.style.display = "none"; });
+      // Show only visible ones for this page
+      visible.slice(start, end).forEach(function(r){ r.style.display = ""; });
+
+      var totalVisible = visible.length;
+      document.getElementById("pageInfo").textContent =
+        "第 " + page + " / " + totalPages + " 頁，共 " + totalVisible + " 筆";
+      document.getElementById("prevBtn").disabled = (page <= 1);
+      document.getElementById("nextBtn").disabled = (page >= totalPages);
+    }
+
+    function changePage(delta) {
+      showPage(currentPage + delta);
+    }
+
+    function onSearch() {
+      var input = document.getElementById("searchInput");
+      var filter = input.value.toUpperCase().trim();
+      searchActive = (filter.length > 0);
+
+      if (!searchActive) {
+        // Restore all, then show current page
+        rows.forEach(function(r){ r.style.display = ""; });
+        showPage(1);
+        return;
+      }
+
+      var count = 0;
+      rows.forEach(function(r) {
+        var title = r.getElementsByTagName("h3")[0];
+        var match = title.textContent.toUpperCase().indexOf(filter) > -1;
+        r.style.display = match ? "" : "none";
+        if (match) count++;
+      });
+
+      // After search, show from page 1
+      showPage(1);
+    }
+
+    // Initialize
+    showPage(1);
   </script>
 </body>
 </html>
