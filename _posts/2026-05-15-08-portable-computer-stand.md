@@ -5,6 +5,7 @@ image: "https://i8.momoshop.com.tw/1749532854/goodsimg/TP000/3599/0010/302/TP000
 alt: "可移動電腦主機架｜免運・收納整齊・底部滑輪設計"
 category: 傢寢運動
 shop: momo
+permalink: /portable-cpu-computer-stand/
 description: "可移動電腦主機架｜免運・收納整齊・底部滑輪設計。可移動電腦主機架，幫你把主機離地收納，告別灰塵與潮濕。底部滑輪設計，輕鬆移動打掃無死角。免運優惠中。"
 tags:
   - 評測

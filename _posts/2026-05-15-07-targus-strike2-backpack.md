@@ -5,6 +5,7 @@ image: "https://i4.momoshop.com.tw/1692472723/goodsimg/0011/104/140/11104140_R.w
 alt: "Targus 17.3 吋 Strike II 電競電腦後背包｜27公升大容量、"
 category: 3C
 shop: momo
+permalink: /targus-strike-ii-laptop-backpack/
 description: "Targus 17.3 吋 Strike II 電競電腦後背包｜27公升大容量、商務機能。Targus Strike II 電競電腦後背包，專為 17.3 吋筆電設計，27 公升大容量空間， 商務與電競兼顧。兩側水壺袋實用設計，日常通勤或短程旅行都適用。"
 tags:
   - 評測

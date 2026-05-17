@@ -5,6 +5,7 @@ image: "https://i1.momoshop.com.tw/1765778034/goodsimg/0014/788/690/14788690_R.w
 alt: "SFS 立式壁掛式自行車儲物架｜鋁鋼結構・升降收納・節省空間"
 category: 傢寢運動
 shop: momo
+permalink: /sfs-wall-mounted-bike-rack/
 description: "SFS 立式壁掛式自行車儲物架｜鋁鋼結構・升降收納・節省空間。SFS 立式壁掛式自行車儲物架，鋁鋼結構堅固穩定，承重力佳。直立節省空間設計，讓家裡不再被自行車佔據。升降輕鬆收納，操作省力。1年保固，促銷優惠中。"
 tags:
   - 評測

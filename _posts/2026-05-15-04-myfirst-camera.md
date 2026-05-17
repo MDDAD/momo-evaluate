@@ -5,6 +5,7 @@ image: "https://i3.momoshop.com.tw/1743486512/goodsimg/0013/861/235/13861235_B.w
 alt: "myFirst Camera AI智慧兒童相機：孩子的第一台創作利器"
 category: 3C
 shop: momo
+permalink: /myfirst-camera-ai-kids-camera/
 description: "myFirst Camera AI智慧兒童相機：孩子的第一台創作利器。myFirst Camera AI 是一款專為小朋友設計的智慧相機，結合了 AI 創作輔助功能，讓孩子能夠輕鬆拍攝、編輯並創作屬於自己的精彩作品。"
 tags:
   - 開箱

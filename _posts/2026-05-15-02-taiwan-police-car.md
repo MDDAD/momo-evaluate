@@ -5,6 +5,7 @@ image: "https://res.cloudinary.com/dplxqsfc1/image/fetch/w_300,f_auto,q_auto/htt
 alt: "1:18 台灣配音警車"
 category: 3C
 shop: momo
+permalink: /taiwan-police-car-toy-118/
 description: "1:18 台灣配音警車。這款 1:18 比例的台灣警車玩具，憑藉其逼真的「台灣小朋友配音」與聲光效果，成為許多家長選購兒童玩具的首選。"
 tags:
   - 玩具開箱

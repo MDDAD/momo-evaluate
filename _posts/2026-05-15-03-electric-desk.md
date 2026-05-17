@@ -5,6 +5,7 @@ image: "https://i8.momoshop.com.tw/1777648962/goodsimg/TP000/8914/0005/080/TP000
 alt: "電動升降電腦桌：在家辦公與電競的理想選擇"
 category: 家電
 shop: momo
+permalink: /electric-height-adjustable-desk/
 description: "電動升降電腦桌：在家辦公與電競的理想選擇。這款電動升降電腦桌，結合現代美學與實用功能，支援全自動高度調節，讓你可以在坐著與站著工作之間自由切換，大幅提升久坐工作時的健康舒適度。"
 tags:
   - 評測
