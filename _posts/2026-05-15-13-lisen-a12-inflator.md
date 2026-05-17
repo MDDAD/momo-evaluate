@@ -3,8 +3,13 @@ layout: post
 title: "【評測】Lisen A12 充氣機｜5000mAh大電量・AI自動充停・四渦輪3秒速充"
 image: "https://i3.momoshop.com.tw/1745643640/goodsimg/0013/745/623/13745623_R.webp"
 category: 3C
+shop: momo
+description: "Lisen A12 充氣機｜5000mAh大電量・AI自動充停・四渦輪3秒速充。Lisen A12 充氣機，搭載德國AI晶片控溫，長時間使用不發燙。5000mAh大電量，四渦輪設計1秒速充。AI自動充停功能，設定好就免看管。汽車機車胎壓、打籃球、腳踏車充氣一機搞定。1年保固。"
+tags:
+  - 評測
+  - 充氣機
+  - 大電量
 ---
-
 ## 產品總覽
 Lisen A12 充氣機，搭載德國AI晶片控溫，長時間使用不發燙。5000mAh大電量，四渦輪設計1秒速充。AI自動充停功能，設定好就免看管。汽車機車胎壓、打籃球、腳踏車充氣一機搞定。1年保固。
 
@@ -28,4 +33,4 @@ Lisen A12 充氣機，搭載德國AI晶片控溫，長時間使用不發燙。50
 ## 立即到 MOMO 查看優惠
 [點擊此處前往 MOMO 購物網選購](https://s.momoshop.com.tw/s/gdokqndN){: .shop-link}
 
-![](https://i3.momoshop.com.tw/1745643640/goodsimg/0013/745/623/13745623_R.webp)
+![Lisen A12 充氣機｜5000mAh大電量・AI自動充停・四渦輪3秒速充](https://i3.momoshop.com.tw/1745643640/goodsimg/0013/745/623/13745623_R.webp){: loading="lazy"}

@@ -257,3 +257,15 @@ img { max-width: 100%; display: block; }
   .page-title { font-size: 1.6rem; }
   .post-layout { padding: 20px 14px; }
 }
+.breadcrumb {
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #888;
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+}
+.breadcrumb a {
+  color: #007bff;
+  text-decoration: none;
+}
+.breadcrumb a:hover { text-decoration: underline; }

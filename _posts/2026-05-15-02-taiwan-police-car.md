@@ -3,8 +3,13 @@ layout: post
 title: "【玩具開箱】1:18 台灣配音警車"
 image: "https://res.cloudinary.com/dplxqsfc1/image/fetch/w_300,f_auto,q_auto/https://i7.momoshop.com.tw/1723837157/expertimg/TP000/2179/0000/669/TP00021790000000_m_1_1.jpg"
 category: 3C
+shop: momo
+description: "1:18 台灣配音警車。這款 1:18 比例的台灣警車玩具，憑藉其逼真的「台灣小朋友配音」與聲光效果，成為許多家長選購兒童玩具的首選。"
+tags:
+  - 玩具開箱
+  - 台灣配音警車
+  - 3C
 ---
-
 ## 產品總覽
 這款 1:18 比例的台灣警車玩具，憑藉其逼真的「台灣小朋友配音」與聲光效果，成為許多家長選購兒童玩具的首選。
 
@@ -21,4 +26,4 @@ category: 3C
 ### 立即到 MOMO 查看優惠
 [點擊此處前往 MOMO 購物網選購](https://s.momoshop.com.tw/s/hqVF1ecL){: .shop-link}
 
-![](https://res.cloudinary.com/dplxqsfc1/image/fetch/w_600,f_auto,q_auto/https://i7.momoshop.com.tw/1723837157/expertimg/TP000/2179/0000/669/TP00021790000000_m_1_1.jpg)
+![1:18 台灣配音警車](https://res.cloudinary.com/dplxqsfc1/image/fetch/w_300,f_auto,q_auto/https://i7.momoshop.com.tw/1723837157/expertimg/TP000/2179/0000/669/TP00021790000000_m_1_1.jpg){: loading="lazy"}

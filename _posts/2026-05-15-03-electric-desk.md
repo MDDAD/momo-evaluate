@@ -3,8 +3,13 @@ layout: post
 title: "【評測】電動升降電腦桌：在家辦公與電競的理想選擇"
 image: "https://i8.momoshop.com.tw/1777648962/goodsimg/TP000/8914/0005/080/TP00089140005080_R_m.jpg"
 category: 家電
+shop: momo
+description: "電動升降電腦桌：在家辦公與電競的理想選擇。這款電動升降電腦桌，結合現代美學與實用功能，支援全自動高度調節，讓你可以在坐著與站著工作之間自由切換，大幅提升久坐工作時的健康舒適度。"
+tags:
+  - 評測
+  - 電動升降電腦桌
+  - 在家辦公與電競的理想選擇
 ---
-
 ## 產品總覽
 這款電動升降電腦桌，結合現代美學與實用功能，支援全自動高度調節，讓你可以在坐著與站著工作之間自由切換，大幅提升久坐工作時的健康舒適度。
 
@@ -24,4 +29,4 @@ category: 家電
 ### 立即到 MOMO 查看優惠
 [點擊此處前往 MOMO 購物網選購](https://s.momoshop.com.tw/s/CRVscwQ5){: .shop-link}
 
-![](https://i8.momoshop.com.tw/1777648962/goodsimg/TP000/8914/0005/080/TP00089140005080_R_m.jpg)
+![電動升降電腦桌：在家辦公與電競的理想選擇](https://i8.momoshop.com.tw/1777648962/goodsimg/TP000/8914/0005/080/TP00089140005080_R_m.jpg){: loading="lazy"}

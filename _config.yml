@@ -1,2 +1,14 @@
 title: AI 好物評價網
 permalink: /:title/
+url: https://mddad.github.io/momo-evaluate
+jsonld:
+  "@context": "https://schema.org"
+  "@type": "WebSite"
+  "name": "AI 好物評價網"
+  "url": "https://mddad.github.io/momo-evaluate/"
+  "description": "AI 好物評價網收錄各類生活用品、3C電子產品的開箱評測"
+  "potentialAction":
+    "@type": "SearchAction"
+    "target": "https://mddad.github.io/momo-evaluate/?q={search_term_string}"
+    "query-input": "required name=search_term_string"
+

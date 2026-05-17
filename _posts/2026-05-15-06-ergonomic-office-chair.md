@@ -3,8 +3,13 @@ layout: post
 title: "【評測】人體工學電腦椅｜電競椅家用款式，舒適支撐久坐不累"
 image: "https://i5.momoshop.com.tw/1766132792/goodsimg/TP000/3599/0013/326/TP00035990013326_R_m.jpg"
 category: 傢寢運動
+shop: momo
+description: "人體工學電腦椅｜電競椅家用款式，舒適支撐久坐不累。人體工學設計電腦椅，適合電競與居家辦公使用。採用透氣網布材質，支撐脊椎自然曲線，長時間久坐也能保持舒適。"
+tags:
+  - 評測
+  - 人體工學電腦椅
+  - 電競椅家用款式
 ---
-
 ## 產品總覽
 人體工學設計電腦椅，適合電競與居家辦公使用。採用透氣網布材質，支撐脊椎自然曲線，長時間久坐也能保持舒適。
 
@@ -23,4 +28,4 @@ category: 傢寢運動
 ## 立即到 MOMO 查看優惠
 [點擊此處前往 MOMO 購物網選購](https://s.momoshop.com.tw/s/RhSTQ9Qv){: .shop-link}
 
-![](https://i5.momoshop.com.tw/1766132792/goodsimg/TP000/3599/0013/326/TP00035990013326_R_m.jpg)
+![人體工學電腦椅｜電競椅家用款式，舒適支撐久坐不累](https://i5.momoshop.com.tw/1766132792/goodsimg/TP000/3599/0013/326/TP00035990013326_R_m.jpg){: loading="lazy"}

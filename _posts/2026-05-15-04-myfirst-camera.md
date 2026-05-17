@@ -3,8 +3,13 @@ layout: post
 title: "【開箱】myFirst Camera AI智慧兒童相機：孩子的第一台創作利器"
 image: "https://i3.momoshop.com.tw/1743486512/goodsimg/0013/861/235/13861235_B.webp"
 category: 3C
+shop: momo
+description: "myFirst Camera AI智慧兒童相機：孩子的第一台創作利器。myFirst Camera AI 是一款專為小朋友設計的智慧相機，結合了 AI 創作輔助功能，讓孩子能夠輕鬆拍攝、編輯並創作屬於自己的精彩作品。"
+tags:
+  - 開箱
+  - 智慧兒童相機
+  - 孩子的第一台創作利器
 ---
-
 ## 產品總覽
 myFirst Camera AI 是一款專為小朋友設計的智慧相機，結合了 AI 創作輔助功能，讓孩子能夠輕鬆拍攝、編輯並創作屬於自己的精彩作品。
 
@@ -23,4 +28,4 @@ myFirst Camera AI 是一款專為小朋友設計的智慧相機，結合了 AI �
 ### 立即到 MOMO 查看優惠
 [點擊此處前往 MOMO 購物網選購](https://s.momoshop.com.tw/s/AYM98gHT){: .shop-link}
 
-![](https://i3.momoshop.com.tw/1743486512/goodsimg/0013/861/235/13861235_B.webp)
+![myFirst Camera AI智慧兒童相機：孩子的第一台創作利器](https://i3.momoshop.com.tw/1743486512/goodsimg/0013/861/235/13861235_B.webp){: loading="lazy"}

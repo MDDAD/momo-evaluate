@@ -3,8 +3,13 @@ layout: post
 title: "【評測】可移動電腦主機架｜免運・收納整齊・底部滑輪設計"
 image: "https://i8.momoshop.com.tw/1749532854/goodsimg/TP000/3599/0010/302/TP00035990010302_R_m.jpg"
 category: 傢寢運動
+shop: momo
+description: "可移動電腦主機架｜免運・收納整齊・底部滑輪設計。可移動電腦主機架，幫你把主機離地收納，告別灰塵與潮濕。底部滑輪設計，輕鬆移動打掃無死角。免運優惠中。"
+tags:
+  - 評測
+  - 可移動電腦主機架
+  - 免運
 ---
-
 ## 產品總覽
 可移動電腦主機架，幫你把主機離地收納，告別灰塵與潮濕。底部滑輪設計，輕鬆移動打掃無死角。免運優惠中。
 
@@ -23,4 +28,4 @@ category: 傢寢運動
 ## 立即到 MOMO 查看優惠
 [點擊此處前往 MOMO 購物網選購](https://s.momoshop.com.tw/s/ZjikPjzT){: .shop-link}
 
-![](https://i8.momoshop.com.tw/1749532854/goodsimg/TP000/3599/0010/302/TP00035990010302_R_m.jpg)
+![可移動電腦主機架｜免運・收納整齊・底部滑輪設計](https://i8.momoshop.com.tw/1749532854/goodsimg/TP000/3599/0010/302/TP00035990010302_R_m.jpg){: loading="lazy"}
