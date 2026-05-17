@@ -2,6 +2,7 @@
 layout: post
 title: "【評測】ONE 生活 電動升降電腦桌｜台灣製造・多功能收納・雙色可選"
 image: "https://i3.momoshop.com.tw/1770747063/goodsimg/0014/833/321/14833321_B.webp"
+alt: "ONE 生活 電動升降電腦桌｜台灣製造・多功能收納・雙色可選"
 category: 傢寢運動
 shop: momo
 description: "ONE 生活 電動升降電腦桌｜台灣製造・多功能收納・雙色可選。多功能可掛可收納的電動升降電腦桌，採用台灣製造品質，寬120CM，適合居家辦公與電競使用。雙色可選，滿足不同居家風格需求。"

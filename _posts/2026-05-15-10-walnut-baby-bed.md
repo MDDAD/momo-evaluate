@@ -2,6 +2,7 @@
 layout: post
 title: "【評測】胡桃木兒童嬰兒床｜櫸木框架・全場免運・破損補寄"
 image: "https://i8.momoshop.com.tw/1745899282207/entpimg/TP000/6697/layout/img/shopIconS101202504291201.jpg"
+alt: "胡桃木兒童嬰兒床｜櫸木框架・全場免運・破損補寄"
 category: 母嬰用品
 shop: momo
 description: "胡桃木兒童嬰兒床｜櫸木框架・全場免運・破損補寄。胡桃木紋設計的兒童嬰兒床，採用櫸木框架，堅固耐用，適合男孩女孩使用。可當單人床或拼接床，一張陪伴孩子成長的安心好床。全場免運，破損補寄。"
