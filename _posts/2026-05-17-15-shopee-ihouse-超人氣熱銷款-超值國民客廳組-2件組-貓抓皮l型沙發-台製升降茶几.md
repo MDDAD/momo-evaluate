@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-820l6-mm8ldx7x4w03
 alt: "IHouse-【超人氣熱銷款】超值國民客廳組 / 2件組(貓抓皮L型沙發+台製升"
 category: 傢寢運動
 shop: shopee
-permalink: /ihouse-超人氣熱銷款-超值國民客廳組-2件組-貓抓皮l型沙發-台製升降茶几/
+permalink: "/shopee-15/"
 tags:
   - 傢寢運動
   - IHouse-【超人氣熱銷款】超值國民客廳組

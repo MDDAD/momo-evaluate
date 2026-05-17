@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-7qukz-lgnh346jy0ix
 alt: "NEW STAR 肩背包男 日系防水前口袋側背包包 公事包 筆電包 電腦包 托特"
 category: 3C
 shop: shopee
-permalink: /new-star-肩背包男-日系防水前口袋側背包包-公事包-筆電包/
+permalink: "/shopee-06/"
 tags:
   - 3C
   - NEW

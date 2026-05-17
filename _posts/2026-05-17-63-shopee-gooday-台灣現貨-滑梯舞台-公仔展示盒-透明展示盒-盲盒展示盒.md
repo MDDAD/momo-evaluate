@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-820la-mlekfskoq48x
 alt: "【Gooday✨台灣現貨】滑梯舞台 公仔展示盒 透明展示盒 盲盒展示盒 公仔收納"
 category: 日用生活
 shop: shopee
-permalink: /gooday-台灣現貨-滑梯舞台-公仔展示盒-透明展示盒-盲盒展示盒/
+permalink: "/shopee-63/"
 tags:
   - 日用生活
   - 【Gooday✨台灣現貨】滑梯舞台

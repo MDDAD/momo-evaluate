@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-7r98r-lm2mczkt1315
 alt: "【LaBear】電動螺絲起子 電動/手動兩用 LED照明 掛繩孔 充電式 電動起"
 category: 3C
 shop: shopee
-permalink: /labear-電動螺絲起子-電動-手動兩用-led照明-掛繩孔/
+permalink: "/shopee-65/"
 tags:
   - 3C
   - 【LaBear】電動螺絲起子

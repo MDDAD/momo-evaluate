@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-7r98q-lzsoeqpion4u
 alt: "POLYWELL 30W三孔PD快充頭 雙USB-C+USB-A充電器 GaN氮"
 category: 3C
 shop: shopee
-permalink: /polywell-30w三孔pd快充頭-雙usb-usb-a充電器-gan氮化鎵/
+permalink: "/shopee-90/"
 tags:
   - 3C
   - POLYWELL

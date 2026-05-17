@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-81ztn-mjqranhwfk7b
 alt: "TZUMii 雅緻四門二抽衣櫥 衣櫃 衣物收納櫃"
 category: 傢寢運動
 shop: shopee
-permalink: /tzumii-雅緻四門二抽衣櫥-衣櫃-衣物收納櫃/
+permalink: "/shopee-55/"
 tags:
   - 傢寢運動
   - TZUMii

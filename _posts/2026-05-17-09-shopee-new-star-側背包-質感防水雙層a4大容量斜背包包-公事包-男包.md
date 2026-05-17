@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-7r991-lqovrk90r108
 alt: "NEW STAR 側背包 質感防水雙層A4大容量斜背包包 公事包 男 女 男包 "
 category: 流行時尚
 shop: shopee
-permalink: /new-star-側背包-質感防水雙層a4大容量斜背包包-公事包-男包/
+permalink: "/shopee-09/"
 tags:
   - 流行時尚
   - NEW

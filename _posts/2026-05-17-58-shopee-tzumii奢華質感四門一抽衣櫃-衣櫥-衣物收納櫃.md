@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-7r98t-lnmiu32bs9ix
 alt: "TZUMii奢華質感四門一抽衣櫃 衣櫥 衣物收納櫃"
 category: 傢寢運動
 shop: shopee
-permalink: /tzumii奢華質感四門一抽衣櫃-衣櫥-衣物收納櫃/
+permalink: "/shopee-58/"
 tags:
   - 傢寢運動
   - TZUMii奢華質感四門一抽衣櫃

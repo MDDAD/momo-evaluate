@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/sg-11134301-7repd-m8px2i0te947
 alt: "【蝦皮直營】刷樂 Shallop 兒童含氟漱口水500ml(青蘋果/草莓/葡萄)"
 category: 日用生活
 shop: shopee
-permalink: /蝦皮直營-刷樂-shallop-兒童含氟漱口水500ml-青蘋果-草莓/
+permalink: "/shopee-56/"
 tags:
   - 日用生活
   - 【蝦皮直營】刷樂

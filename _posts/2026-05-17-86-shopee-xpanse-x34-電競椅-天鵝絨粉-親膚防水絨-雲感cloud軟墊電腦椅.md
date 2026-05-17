@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-81ztk-mgnixsf629sa
 alt: "【Xpanse】X34 電競椅「天鵝絨粉」親膚防水絨+雲感cloud軟墊電腦椅 "
 category: 3C
 shop: shopee
-permalink: /xpanse-x34-電競椅-天鵝絨粉-親膚防水絨-雲感cloud軟墊電腦椅/
+permalink: "/shopee-86/"
 tags:
   - 3C
   - 【Xpanse】X34

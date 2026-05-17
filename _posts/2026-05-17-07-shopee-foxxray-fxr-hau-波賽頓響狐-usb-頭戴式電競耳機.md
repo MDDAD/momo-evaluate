@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-23030-q2zp26qenmov
 alt: "FOXXRAY FXR-HAU-37 波賽頓響狐 USB 頭戴式電競耳機 加大厚"
 category: 3C
 shop: shopee
-permalink: /foxxray-fxr-hau-波賽頓響狐-usb-頭戴式電競耳機/
+permalink: "/shopee-07/"
 tags:
   - 3C
   - FOXXRAY

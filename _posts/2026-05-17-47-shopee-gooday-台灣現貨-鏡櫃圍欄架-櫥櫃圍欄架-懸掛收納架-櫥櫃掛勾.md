@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-820ld-mmjr6q7hxc06
 alt: "【Gooday✨台灣現貨】鏡櫃圍欄架 櫥櫃圍欄架 懸掛收納架 櫥櫃掛勾 櫥櫃掛架"
 category: 傢寢運動
 shop: shopee
-permalink: /gooday-台灣現貨-鏡櫃圍欄架-櫥櫃圍欄架-懸掛收納架-櫥櫃掛勾/
+permalink: "/shopee-47/"
 tags:
   - 傢寢運動
   - 【Gooday✨台灣現貨】鏡櫃圍欄架

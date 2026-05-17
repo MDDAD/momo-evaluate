@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-7rbk5-matlq5scghrt
 alt: "【Gooday✨附不倒膠】萌粒展示盒 公仔展示盒 萌粒收納盒 壓克力展示盒 扭蛋"
 category: 日用生活
 shop: shopee
-permalink: /gooday-附不倒膠-萌粒展示盒-公仔展示盒-萌粒收納盒-壓克力展示盒/
+permalink: "/shopee-75/"
 tags:
   - 日用生活
   - 【Gooday✨附不倒膠】萌粒展示盒

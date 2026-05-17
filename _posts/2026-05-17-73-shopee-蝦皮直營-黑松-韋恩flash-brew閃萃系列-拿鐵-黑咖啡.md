@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/sg-11134301-820n6-mnz2yasnajgk
 alt: "【蝦皮直營】黑松 韋恩Flash Brew閃萃系列 拿鐵/黑咖啡 500ml(4"
 category: 保健/食品
 shop: shopee
-permalink: /蝦皮直營-黑松-韋恩flash-brew閃萃系列-拿鐵-黑咖啡/
+permalink: "/shopee-73/"
 tags:
   - 保健/食品
   - 【蝦皮直營】黑松

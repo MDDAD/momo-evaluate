@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-81ztc-mi4281m6qscm
 alt: "【Gooday✨台灣現貨】縫隙收納櫃 廚房 夾縫收納櫃 夾縫置物櫃 客廳夾縫置物"
 category: 傢寢運動
 shop: shopee
-permalink: /gooday-台灣現貨-縫隙收納櫃-廚房-夾縫收納櫃-夾縫置物櫃/
+permalink: "/shopee-23/"
 tags:
   - 傢寢運動
   - 【Gooday✨台灣現貨】縫隙收納櫃

@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/sg-11134201-7ratg-mb6hx2kyahkm
 alt: "【現貨免運台灣保固】Hysure海說George 除濕機 空氣清淨除濕機 除溼機"
 category: 家電
 shop: shopee
-permalink: /現貨免運台灣保固-hysure海說george-除濕機-空氣清淨除濕機-除溼機-小型除濕機/
+permalink: "/shopee-13/"
 tags:
   - 家電
   - 【現貨免運台灣保固】Hysure海說George

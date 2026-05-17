@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-81ztg-mipgyp0ewjd3
 alt: "【Gooday隔日到貨】LED 聲控 帶燈公仔收納盒 帶燈展示盒 公仔盒 公仔展"
 category: 3C
 shop: shopee
-permalink: /gooday隔日到貨-led-聲控-帶燈公仔收納盒-帶燈展示盒-公仔盒/
+permalink: "/shopee-74/"
 tags:
   - 3C
   - 【Gooday隔日到貨】LED

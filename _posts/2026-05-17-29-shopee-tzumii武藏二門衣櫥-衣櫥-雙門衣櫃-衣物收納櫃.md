@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/f745321b55a3d85d99c45dcdc6c474
 alt: "TZUMii武藏二門衣櫥 衣櫥 雙門衣櫃 衣物收納櫃"
 category: 傢寢運動
 shop: shopee
-permalink: /tzumii武藏二門衣櫥-衣櫥-雙門衣櫃-衣物收納櫃/
+permalink: "/shopee-29/"
 tags:
   - 傢寢運動
   - TZUMii武藏二門衣櫥

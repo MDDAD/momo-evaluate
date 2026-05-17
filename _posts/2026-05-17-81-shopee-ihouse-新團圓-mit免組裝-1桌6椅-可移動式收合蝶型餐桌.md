@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-820l8-mkkrg6rdwkci
 alt: "IHouse-新團圓 MIT免組裝 1桌6椅 可移動式收合蝶型餐桌"
 category: 傢寢運動
 shop: shopee
-permalink: /ihouse-新團圓-mit免組裝-1桌6椅-可移動式收合蝶型餐桌/
+permalink: "/shopee-81/"
 tags:
   - 傢寢運動
   - IHouse-新團圓

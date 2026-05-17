@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-7rbkb-m6hrx8xx7ku7
 alt: "TZUMii凱特四門隙縫雙向收納衣櫃 衣櫥 邊櫃 隙縫櫃 2尺衣櫃-雙色可選"
 category: 傢寢運動
 shop: shopee
-permalink: /tzumii凱特四門隙縫雙向收納衣櫃-衣櫥-邊櫃-隙縫櫃-2尺衣櫃-雙色可選/
+permalink: "/shopee-48/"
 tags:
   - 傢寢運動
   - TZUMii凱特四門隙縫雙向收納衣櫃

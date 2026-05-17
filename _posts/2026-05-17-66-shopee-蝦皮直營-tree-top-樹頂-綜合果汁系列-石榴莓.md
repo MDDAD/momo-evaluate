@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/sg-11134301-7repw-m82ro8dm4qzm
 alt: "【蝦皮直營】TREE TOP 樹頂 100% 綜合果汁系列 石榴莓/柳橙/蘋果/"
 category: 日用生活
 shop: shopee
-permalink: /蝦皮直營-tree-top-樹頂-綜合果汁系列-石榴莓/
+permalink: "/shopee-66/"
 tags:
   - 日用生活
   - 【蝦皮直營】TREE

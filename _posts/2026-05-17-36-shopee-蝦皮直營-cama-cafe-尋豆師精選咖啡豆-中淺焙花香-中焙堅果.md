@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/91a3cecda3e28e09cc2d8ecbab1c89
 alt: "【蝦皮直營】cama cafe 尋豆師精選咖啡豆 中淺焙花香/中焙堅果/深焙焦糖"
 category: 保健/食品
 shop: shopee
-permalink: /蝦皮直營-cama-cafe-尋豆師精選咖啡豆-中淺焙花香-中焙堅果/
+permalink: "/shopee-36/"
 tags:
   - 保健/食品
   - 【蝦皮直營】cama

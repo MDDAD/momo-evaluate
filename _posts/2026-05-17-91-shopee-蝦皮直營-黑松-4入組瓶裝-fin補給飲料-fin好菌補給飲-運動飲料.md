@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/sg-11134301-7rdwa-m14xhxy5oy9s
 alt: "【蝦皮直營】黑松 4入組瓶裝 FIN補給飲料 / FIN好菌補給飲 運動飲料 5"
 category: 保健/食品
 shop: shopee
-permalink: /蝦皮直營-黑松-4入組瓶裝-fin補給飲料-fin好菌補給飲-運動飲料/
+permalink: "/shopee-91/"
 tags:
   - 保健/食品
   - 【蝦皮直營】黑松

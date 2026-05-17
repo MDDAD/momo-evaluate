@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-81ztj-mi5f17l8duki
 alt: "【Gooday✨台灣現貨】壁掛翻蓋收納盒 日式收納盒 壁掛收納盒 壁掛收納架 日"
 category: 傢寢運動
 shop: shopee
-permalink: /gooday-台灣現貨-壁掛翻蓋收納盒-日式收納盒-壁掛收納盒-壁掛收納架/
+permalink: "/shopee-38/"
 tags:
   - 傢寢運動
   - 【Gooday✨台灣現貨】壁掛翻蓋收納盒

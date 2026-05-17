@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/sg-11134201-22090-bu6nvy8wsyhv
 alt: "靚Quiet - 眼罩 立體記憶綿眼罩 | 睡眠，舒適，高遮光"
 category: 日用生活
 shop: shopee
-permalink: /靚quiet-眼罩-立體記憶綿眼罩-睡眠-舒適-高遮光/
+permalink: "/shopee-18/"
 tags:
   - 日用生活
   - 靚Quiet

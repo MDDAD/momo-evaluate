@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-820lh-mlxamxude5fp
 alt: "台灣公司貨【德國MOVMA多功能蒸蛋器】NTC智能溫控 升級7大功能 蒸蛋器 煮"
 category: 日用生活
 shop: shopee
-permalink: /台灣公司貨-德國movma多功能蒸蛋器-ntc智能溫控-升級7大功能-蒸蛋器-煮蛋器/
+permalink: "/shopee-08/"
 tags:
   - 日用生活
   - 台灣公司貨【德國MOVMA多功能蒸蛋器】NTC智能溫控

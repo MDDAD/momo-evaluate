@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-820lh-mo68kxszmght
 alt: "NEUTRAL 瞬間就穿好！防潑水免綁帶秒穿氣墊鞋"
 category: 流行時尚
 shop: shopee
-permalink: /neutral-瞬間就穿好-防潑水免綁帶秒穿氣墊鞋/
+permalink: "/shopee-37/"
 tags:
   - 流行時尚
   - NEUTRAL

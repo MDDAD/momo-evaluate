@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-7r991-lrws8ooaywi0
 alt: "台灣24H速發D11 Baby in car 車用磁吸貼 孕婦車貼 寶寶反光車貼"
 category: 汽車用品
 shop: shopee
-permalink: /台灣24h速發d11-baby-in-car-車用磁吸貼-孕婦車貼/
+permalink: "/shopee-84/"
 tags:
   - 汽車用品
   - 台灣24H速發D11

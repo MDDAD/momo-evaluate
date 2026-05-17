@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-7r98y-llvtksl7og49
 alt: "【Gooday台灣現貨】貨櫃 公仔展示盒 展示盒 公仔收納盒 帶燈展示盒 泡泡瑪"
 category: 傢寢運動
 shop: shopee
-permalink: /gooday台灣現貨-貨櫃-公仔展示盒-展示盒-公仔收納盒-帶燈展示盒/
+permalink: "/shopee-87/"
 tags:
   - 傢寢運動
   - 【Gooday台灣現貨】貨櫃

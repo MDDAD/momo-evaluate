@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-7rbk1-m77q86dvyusx
 alt: "【Gooday✨台灣出貨】抽屜式 壁掛置物架 壁掛架 浴室置物架 無痕置物架 壁"
 category: 傢寢運動
 shop: shopee
-permalink: /gooday-台灣出貨-抽屜式-壁掛置物架-壁掛架-浴室置物架/
+permalink: "/shopee-61/"
 tags:
   - 傢寢運動
   - 【Gooday✨台灣出貨】抽屜式

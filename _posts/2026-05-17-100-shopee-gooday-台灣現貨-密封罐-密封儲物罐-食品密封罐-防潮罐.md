@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-820l7-mmic61jkugp4
 alt: "【Gooday✨台灣現貨】密封罐 密封儲物罐 食品密封罐 防潮罐 加厚材質 透明"
 category: 保健/食品
 shop: shopee
-permalink: /gooday-台灣現貨-密封罐-密封儲物罐-食品密封罐-防潮罐/
+permalink: "/shopee-100/"
 tags:
   - 保健/食品
   - 【Gooday✨台灣現貨】密封罐

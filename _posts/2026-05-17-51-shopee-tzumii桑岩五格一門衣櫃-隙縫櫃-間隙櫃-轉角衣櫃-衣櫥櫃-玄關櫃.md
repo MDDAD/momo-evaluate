@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-7rbk8-m7vkimqipht6
 alt: "TZUMii桑岩五格一門衣櫃 隙縫櫃  間隙櫃 轉角衣櫃 衣櫥櫃 玄關櫃 開放式"
 category: 傢寢運動
 shop: shopee
-permalink: /tzumii桑岩五格一門衣櫃-隙縫櫃-間隙櫃-轉角衣櫃-衣櫥櫃-玄關櫃/
+permalink: "/shopee-51/"
 tags:
   - 傢寢運動
   - TZUMii桑岩五格一門衣櫃

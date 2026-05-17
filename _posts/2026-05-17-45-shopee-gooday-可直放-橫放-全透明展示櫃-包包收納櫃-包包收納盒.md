@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-81ztf-mi01ms6k1v5s
 alt: "【Gooday✨可直放&橫放】全透明展示櫃 包包收納櫃 包包收納盒 防塵收納盒 "
 category: 傢寢運動
 shop: shopee
-permalink: /gooday-可直放-橫放-全透明展示櫃-包包收納櫃-包包收納盒/
+permalink: "/shopee-45/"
 tags:
   - 傢寢運動
   - 【Gooday✨可直放&橫放】全透明展示櫃

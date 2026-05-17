@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-81zte-mhbrxxph9ukt
 alt: "IHouse-山田 台製機能充電 木心板小夜燈+USB床頭片"
 category: 傢寢運動
 shop: shopee
-permalink: /ihouse-山田-台製機能充電-木心板小夜燈-usb床頭片/
+permalink: "/shopee-31/"
 tags:
   - 傢寢運動
   - IHouse-山田

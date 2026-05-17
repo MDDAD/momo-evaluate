@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-7r98p-lo23saux3dx5
 alt: "IHouse-尼克 手動伸展 無段式休閒沙發躺椅/美容椅"
 category: 傢寢運動
 shop: shopee
-permalink: /ihouse-尼克-手動伸展-無段式休閒沙發躺椅-美容椅/
+permalink: "/shopee-89/"
 tags:
   - 傢寢運動
   - IHouse-尼克

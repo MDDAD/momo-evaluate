@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/br-11134201-820lw-mo72h7lvlloh
 alt: "【New Balance】 NB 慢跑鞋_女性_米白色_WCATLS1-D楦 C"
 category: 流行時尚
 shop: shopee
-permalink: /new-balance-nb-慢跑鞋_女性_米白色_wcatls1-d楦-catl/
+permalink: "/shopee-42/"
 tags:
   - 流行時尚
   - 【New

@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-820l9-mn9li7dlsu12
 alt: "Tefal法國特福 爵士系列不沾鍋四件組(炒鍋+湯鍋+鍋蓋+鍋鏟)5月集點換購_"
 category: 日用生活
 shop: shopee
-permalink: /tefal法國特福-爵士系列不沾鍋四件組-炒鍋-湯鍋-鍋蓋-鍋鏟/
+permalink: "/shopee-77/"
 tags:
   - 日用生活
   - Tefal法國特福

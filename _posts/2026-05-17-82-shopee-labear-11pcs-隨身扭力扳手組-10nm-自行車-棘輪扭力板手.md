@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-81zte-mg3ciyalxdlb
 alt: "【LaBear】11pcs 隨身扭力扳手組 2-10Nm 自行車 棘輪扭力板手 "
 category: 汽車用品
 shop: shopee
-permalink: /labear-11pcs-隨身扭力扳手組-10nm-自行車-棘輪扭力板手/
+permalink: "/shopee-82/"
 tags:
   - 汽車用品
   - 【LaBear】11pcs

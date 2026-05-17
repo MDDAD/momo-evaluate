@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-820lc-mny50o0izda9
 alt: "IHouse-度瑪奶油風 雙人懶人小沙發+腳椅(附贈抱枕*1)"
 category: 傢寢運動
 shop: shopee
-permalink: /ihouse-度瑪奶油風-雙人懶人小沙發-腳椅-附贈抱枕/
+permalink: "/shopee-70/"
 tags:
   - 傢寢運動
   - IHouse-度瑪奶油風

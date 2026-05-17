@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/sg-11134301-7rcd0-m6i2p3e6unft
 alt: "【蝦皮直營】Yu-Ki 可可風味喜馬拉雅鹽夾心餅152G/Yu-Ki 蔬菜餅乾2"
 category: 保健/食品
 shop: shopee
-permalink: /蝦皮直營-yu-ki-可可風味喜馬拉雅鹽夾心餅152g-yu-ki/
+permalink: "/shopee-64/"
 tags:
   - 保健/食品
   - 【蝦皮直營】Yu-Ki

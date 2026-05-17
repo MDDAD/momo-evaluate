@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-820le-mnmcvqhwszr7
 alt: "【舒適牌】舒綺極 Salon Plus 沙龍級VIO電動美體除毛刀 (除毛刀私密"
 category: 日用生活
 shop: shopee
-permalink: /舒適牌-舒綺極-salon-plus-沙龍級vio電動美體除毛刀-除毛刀私密處專用/
+permalink: "/shopee-32/"
 tags:
   - 日用生活
   - 【舒適牌】舒綺極

@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/tw-11134207-7qul8-lg0iccczkg01
 alt: "IHouse-沐森 MIT免組裝 掀床+抽屜2合1床底(緩衝安全桿)"
 category: 傢寢運動
 shop: shopee
-permalink: /ihouse-沐森-mit免組裝-掀床-抽屜2合1床底-緩衝安全桿/
+permalink: "/shopee-24/"
 tags:
   - 傢寢運動
   - IHouse-沐森

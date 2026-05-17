@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/893006c33532c90b2a5f25010b3544
 alt: "TZUMii奇普雙門廚房櫃 碗盤櫃 餐櫥櫃 電器櫃(白橡木配白)"
 category: 傢寢運動
 shop: shopee
-permalink: /tzumii奇普雙門廚房櫃-碗盤櫃-餐櫥櫃-電器櫃-白橡木配白/
+permalink: "/shopee-68/"
 tags:
   - 傢寢運動
   - TZUMii奇普雙門廚房櫃

@@ -6,7 +6,7 @@ image: "https://down-tw.img.susercontent.com/file/3582180cc37b48256d7f5258af07f7
 alt: "隔日到貨▷經典防水防刮雙口袋大容量商務包 男生公事包 筆電包 男公事包 187 "
 category: 3C
 shop: shopee
-permalink: /隔日到貨-經典防水防刮雙口袋大容量商務包-男生公事包-筆電包-男公事包-menspace/
+permalink: "/shopee-17/"
 tags:
   - 3C
   - 隔日到貨▷經典防水防刮雙口袋大容量商務包
