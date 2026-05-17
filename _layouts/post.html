@@ -6,6 +6,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} — AI 好物評價網</title>
+  {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+  <meta property="og:title" content="{{ page.title }}">
+  {% if page.description %}<meta property="og:description" content="{{ page.description }}">{% endif %}
+  {% if page.image %}<meta property="og:image" content="{{ page.image }}">{% endif %}
+  <meta property="og:type" content="article">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ site.baseurl | default: '/' }}/assets/css/main.css">
