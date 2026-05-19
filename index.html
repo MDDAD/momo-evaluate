@@ -27,10 +27,20 @@ layout: null
     .pagination button:disabled { opacity: 0.4; cursor: not-allowed; }
     .pagination button.active { background: #007bff; color: #fff; border-color: #007bff; }
     .page-info { color: #666; font-size: 13px; }
+    .sponsor-bar { text-align: center; padding: 20px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; }
+    .kofi-btn { display: inline-flex; align-items: center; gap: 8px; background: #00b9fe; color: #fff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-size: 15px; font-weight: 600; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,185,254,0.3); }
+    .kofi-btn:hover { background: #00a3e0; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,185,254,0.4); }
+    .kofi-btn img { width: 20px; height: 20px; }
   </style>
 </head>
 <body>
   <h1>AI 好物評價網</h1>
+  <div class="sponsor-bar">
+    <a href="https://ko-fi.com/mddadsiwu" target="_blank" class="kofi-btn">
+      <img src="https://storage.ko-fi.com/cdn/button-1.png" alt="Ko-fi">
+      支持一下
+    </a>
+  </div>
   <input type="text" id="searchInput" onkeyup="onSearch()" placeholder="搜尋商品名稱...">
   <div id="productGrid">
     {% for post in site.posts %}

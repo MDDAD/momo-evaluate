@@ -248,6 +248,45 @@ img { max-width: 100%; display: block; }
 }
 .back-link:hover { color: var(--primary); }
 
+/* ===== Sponsor Button ===== */
+.sponsor-section {
+  margin-top: 36px;
+  padding: 28px;
+  background: linear-gradient(135deg, #f9fafc 0%, #f0f4f8 100%);
+  border-radius: var(--radius);
+  text-align: center;
+  border: 1px solid var(--border);
+}
+.sponsor-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+.kofi-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #00b9fe;
+  color: #fff;
+  padding: 13px 26px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0,185,254,0.3);
+}
+.kofi-btn:hover {
+  background: #00a3e0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,185,254,0.4);
+}
+.kofi-btn img {
+  width: 22px;
+  height: 22px;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
   .product-row-img { width: 90px; height: 90px; }
