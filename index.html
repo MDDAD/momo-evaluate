@@ -17,11 +17,38 @@ layout: null
     body { font-family: sans-serif; padding: 15px; margin: 0; }
     h1 { text-align: center; color: #333; }
     #searchInput { width: 100%; padding: 10px; margin-bottom: 20px; box-sizing: border-box; }
-    .product-row { display: flex; align-items: flex-start; border-bottom: 1px solid #eee; padding: 15px 0; }
-    .product-row img { width: 80px; height: 80px; object-fit: contain; border-radius: 4px; margin-right: 15px; flex-shrink: 0; }
-    .product-info { flex: 1; min-width: 0; }
-    .product-info h3 { margin: 0 0 5px 0; font-size: 16px; color: #333; }
-    .product-info p { margin: 0; font-size: 13px; color: #666; }
+ .product-card {
+ display: flex;
+ flex-direction: column;
+ margin-bottom: 2rem;
+ max-width: 600px;
+ box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+ border-radius: 8px;
+ overflow: hidden;
+ }
+ .product-card img {
+ display: block;
+ width: 100%;
+ height: 100%;
+ transition: transform 0.3s;
+ }
+ .product-card:hover img {
+ transform: scale(1.03);
+ }
+ .product-info h3 {
+ font-size: 1.1rem;
+ }
+ .cta-button {
+ transition: all 0.2s;
+ }
+ .cta-button:hover {
+ background: #0056b3;
+ transform: translateY(-2px);
+ }
+ /* 保留原有樣式供其他元件使用 */
+ .pagination, .sponsor-bar {
+ margin-top: 1rem;
+ }
     .pagination { display: flex; justify-content: center; align-items: center; margin-top: 20px; gap: 8px; }
     .pagination button { padding: 6px 14px; border: 1px solid #ccc; background: #fff; cursor: pointer; border-radius: 4px; }
     .pagination button:disabled { opacity: 0.4; cursor: not-allowed; }
@@ -43,17 +70,33 @@ layout: null
   </div>
   <input type="text" id="searchInput" onkeyup="onSearch()" placeholder="搜尋商品名稱...">
   <div id="productGrid">
-    {% for post in site.posts %}
-      <div class="product-row">
-        <img src="{{ post.image }}" alt="{{ post.title }}">
-        <div class="product-info">
-          <a href="{{ post.url | relative_url }}" style="text-decoration:none;">
-            <h3>{{ post.title }}</h3>
-          </a>
-          <p>{{ post.excerpt | strip_html | truncate: 60 }}</p>
-        </div>
-      </div>
-    {% endfor %}
+ {% for post in site.posts %}
+ <div class="product-card">
+ <!-- 正方形圖片容器 -->
+ <a href="{{ post.url | relative_url }}" style="display: block; width: 100%; padding-top: 100%; position: relative; overflow: hidden;">
+ <img src="{% if post.image %}{{ post.image | replace: 'i.momoshop.com.tw', 'res.cloudinary.com/dplxqsfc1/image/fetch/w_600,f_auto,q_auto' }}{% endif %}" 
+ alt="{{ post.title }}" 
+ style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+ </a>
+ <!-- 文字描述區 -->
+ <div class="product-info" style="text-align: center; padding: 1rem 0;">
+ <a href="{{ post.url | relative_url }}" style="text-decoration:none;">
+ <h3 style="margin: 0 0 0.5rem 0; color: #333;">{{ post.title }}</h3>
+ </a>
+ <p style="color: #666; font-size: 0.9rem; line-height: 1.5; margin: 0;">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+ <a href="{{ post.url | relative_url }}" class="cta-button" style="
+ display: inline-block;
+ background: #007BFF;
+ color: white;
+ padding: 0.5rem 1.5rem;
+ border-radius: 4px;
+ text-decoration: none;
+ font-weight: bold;
+ margin-top: 0.5rem;
+ ">查看詳情</a>
+ </div>
+ </div>
+ {% endfor %}
   </div>
 
   <div class="pagination">
