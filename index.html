@@ -106,6 +106,33 @@ layout: null
       flex: 1;
     }
 
+    /* 類別篩選按鈕 */
+    .category-filter {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .cat-btn {
+      padding: 6px 16px;
+      border: 1px solid #ddd;
+      background: #fff;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      color: #666;
+      transition: all 0.2s;
+    }
+    .cat-btn:hover {
+      border-color: #007bff;
+      color: #007bff;
+    }
+    .cat-btn.active {
+      background: #007bff;
+      color: #fff;
+      border-color: #007bff;
+    }
+
     /* 分頁 */
     .pagination { display: flex; justify-content: center; align-items: center; margin-top: 20px; gap: 8px; }
     .pagination button { padding: 6px 14px; border: 1px solid #ccc; background: #fff; cursor: pointer; border-radius: 4px; }
@@ -124,7 +151,7 @@ layout: null
 </head>
 <body>
   <h1>AI 好物評價網</h1>
-  <p class="subtitle">評測・開箱・導購</p>
+  <p class="subtitle" style="display:none;"></p>
 
   <div class="sponsor-bar">
     <a href="https://ko-fi.com/mddadsiwu" target="_blank" class="kofi-btn">
@@ -135,9 +162,18 @@ layout: null
 
   <input type="text" id="searchInput" onkeyup="onSearch()" placeholder="搜尋商品名稱...">
 
+  <div class="category-filter" id="categoryFilter">
+    <button class="cat-btn active" data-cat="all">全部</button>
+    <button class="cat-btn" data-cat="3c">3C電子</button>
+    <button class="cat-btn" data-cat="life">生活用品</button>
+    <button class="cat-btn" data-cat="home">居家環境</button>
+    <button class="cat-btn" data-cat="kitchen">廚房家電</button>
+    <button class="cat-btn" data-cat="beauty">美妝保健</button>
+  </div>
+
   <div id="productGrid">
     {% for post in site.posts %}
-    <div class="product-card">
+    <div class="product-card" data-cat="{% if post.categories %}{{ post.categories | first }}{% else %}life{% endif %}">
       <a class="card-thumb" href="{{ post.url | relative_url }}">
         <img src="{% if post.image %}{{ post.image | replace: 'i.momoshop.com.tw', 'res.cloudinary.com/dplxqsfc1/image/fetch/w_600,f_auto,q_auto' }}{% endif %}"
              alt="{{ post.title }}" loading="lazy">
@@ -168,10 +204,27 @@ layout: null
     var rows = Array.from(document.getElementsByClassName("product-card"));
     var currentPage = 1;
     var searchActive = false;
+    var currentCategory = "all";
+
+    // 類別篩選按鈕
+    document.querySelectorAll(".cat-btn").forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        document.querySelectorAll(".cat-btn").forEach(function(b){ b.classList.remove("active"); });
+        btn.classList.add("active");
+        currentCategory = btn.getAttribute("data-cat");
+        onSearch();
+      });
+    });
 
     function getVisibleRows() {
-      if (!searchActive) return rows;
-      return rows.filter(function(r){ return r.style.display !== "none"; });
+      var base = rows;
+      if (searchActive) {
+        base = rows.filter(function(r){ return r.style.display !== "none"; });
+      }
+      if (currentCategory !== "all") {
+        base = base.filter(function(r){ return r.getAttribute("data-cat") === currentCategory; });
+      }
+      return base;
     }
 
     function showPage(page) {
@@ -203,20 +256,20 @@ layout: null
       var filter = input.value.toUpperCase().trim();
       searchActive = (filter.length > 0);
 
-      if (!searchActive) {
-        rows.forEach(function(r){ r.style.display = ""; });
-        showPage(1);
-        return;
-      }
+      rows.forEach(function(r){ r.style.display = "none"; });
 
-      var count = 0;
       rows.forEach(function(r) {
         var title = r.getElementsByClassName("card-title")[0];
         var excerpt = r.getElementsByClassName("card-excerpt")[0];
-        var match = (title && title.textContent.toUpperCase().indexOf(filter) > -1) ||
-                    (excerpt && excerpt.textContent.toUpperCase().indexOf(filter) > -1);
-        r.style.display = match ? "" : "none";
-        if (match) count++;
+        var cat = r.getAttribute("data-cat");
+
+        var matchText = !searchActive ||
+          ((title && title.textContent.toUpperCase().indexOf(filter) > -1) ||
+           (excerpt && excerpt.textContent.toUpperCase().indexOf(filter) > -1));
+
+        var matchCat = (currentCategory === "all") || (cat === currentCategory);
+
+        r.style.display = (matchText && matchCat) ? "" : "none";
       });
 
       showPage(1);
