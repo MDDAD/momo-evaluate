@@ -13,90 +13,147 @@ layout: null
   <meta property="og:description" content="AI 好物評價網收錄各類生活用品、3C電子產品的開箱評測，幫你快速找到適合的好物。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mddad.github.io/momo-evaluate/">
-  <style>>
-    body { font-family: sans-serif; padding: 15px; margin: 0; }
-    h1 { text-align: center; color: #333; }
-    #searchInput { width: 100%; padding: 10px; margin-bottom: 20px; box-sizing: border-box; }
- .product-card {
- display: flex;
- flex-direction: column;
- margin-bottom: 2rem;
- max-width: 600px;
- box-shadow: 0 2px 8px rgba(0,0,0,0.1);
- border-radius: 8px;
- overflow: hidden;
- }
- .product-card img {
- display: block;
- width: 100%;
- height: 100%;
- transition: transform 0.3s;
- }
- .product-card:hover img {
- transform: scale(1.03);
- }
- .product-info h3 {
- font-size: 1.1rem;
- }
- .cta-button {
- transition: all 0.2s;
- }
- .cta-button:hover {
- background: #0056b3;
- transform: translateY(-2px);
- }
- /* 保留原有樣式供其他元件使用 */
- .pagination, .sponsor-bar {
- margin-top: 1rem;
- }
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: sans-serif; padding: 15px; margin: 0; background: #f5f5f5; }
+    h1 { text-align: center; color: #333; margin-bottom: 0.5rem; }
+    .subtitle { text-align: center; color: #999; font-size: 0.85rem; margin-bottom: 1rem; }
+    #searchInput { width: 100%; padding: 10px; margin-bottom: 20px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 6px; }
+    .sponsor-bar { text-align: center; padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; }
+    .kofi-btn { display: inline-flex; align-items: center; gap: 8px; background: #00b9fe; color: #fff; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-size: 14px; font-weight: 600; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,185,254,0.3); }
+    .kofi-btn:hover { background: #00a3e0; transform: translateY(-2px); }
+    .kofi-btn svg { width: 18px; height: 18px; }
+
+    /* 4欄Grid卡片 */
+    #productGrid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding: 0;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.14);
+      transform: translateY(-2px);
+    }
+
+    /* 16:9 圖片（與 yunique.cc 一樣） */
+    .card-thumb {
+      display: block;
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+      overflow: hidden;
+      background: #f0f0f0;
+    }
+    .card-thumb img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .product-card:hover .card-thumb img {
+      transform: scale(1.04);
+    }
+
+    /* 卡片文字區 */
+    .card-body {
+      padding: 12px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-meta {
+      font-size: 0.72rem;
+      color: #999;
+      margin-bottom: 5px;
+    }
+    .card-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #222;
+      margin: 0 0 6px 0;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .card-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .card-title a:hover { color: #007bff; }
+    .card-excerpt {
+      font-size: 0.78rem;
+      color: #777;
+      line-height: 1.5;
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      flex: 1;
+    }
+
+    /* 分頁 */
     .pagination { display: flex; justify-content: center; align-items: center; margin-top: 20px; gap: 8px; }
     .pagination button { padding: 6px 14px; border: 1px solid #ccc; background: #fff; cursor: pointer; border-radius: 4px; }
     .pagination button:disabled { opacity: 0.4; cursor: not-allowed; }
     .pagination button.active { background: #007bff; color: #fff; border-color: #007bff; }
     .page-info { color: #666; font-size: 13px; }
-    .sponsor-bar { text-align: center; padding: 20px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; }
-    .kofi-btn { display: inline-flex; align-items: center; gap: 8px; background: #00b9fe; color: #fff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-size: 15px; font-weight: 600; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,185,254,0.3); }
-    .kofi-btn:hover { background: #00a3e0; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,185,254,0.4); }
-    .kofi-btn img { width: 20px; height: 20px; }
+
+    /* RWD：小螢幕時減少欄數 */
+    @media (max-width: 900px) {
+      #productGrid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      #productGrid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
   <h1>AI 好物評價網</h1>
+  <p class="subtitle">評測・開箱・導購</p>
+
   <div class="sponsor-bar">
     <a href="https://ko-fi.com/mddadsiwu" target="_blank" class="kofi-btn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2,21H20V19H2M20,8H18V5H20M20,3H4V13A4,4 0 0,0 8,17H14A4,4 0 0,0 18,13V10H20A2,2 0 0,0 22,8V5A2,2 0 0,0 20,3M13,17.5V15H8V17.5L12,21L13,17.5Z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2,21H20V19H2M20,8H18V5H20M20,3H4V13A4,4 0 0,0 8,17H14A4,4 0 0,0 18,13V10H20A2,2 0 0,0 22,8V5A2,2 0 0,0 20,3M13,17.5V15H8V17.5L12,21L13,17.5Z"/></svg>
       支持一下
     </a>
   </div>
+
   <input type="text" id="searchInput" onkeyup="onSearch()" placeholder="搜尋商品名稱...">
+
   <div id="productGrid">
- {% for post in site.posts %}
- <div class="product-card">
- <!-- 正方形圖片容器 -->
- <a href="{{ post.url | relative_url }}" style="display: block; width: 100%; padding-top: 100%; position: relative; overflow: hidden;">
- <img src="{% if post.image %}{{ post.image | replace: 'i.momoshop.com.tw', 'res.cloudinary.com/dplxqsfc1/image/fetch/w_600,f_auto,q_auto' }}{% endif %}" 
- alt="{{ post.title }}" 
- style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
- </a>
- <!-- 文字描述區 -->
- <div class="product-info" style="text-align: center; padding: 1rem 0;">
- <a href="{{ post.url | relative_url }}" style="text-decoration:none;">
- <h3 style="margin: 0 0 0.5rem 0; color: #333;">{{ post.title }}</h3>
- </a>
- <p style="color: #666; font-size: 0.9rem; line-height: 1.5; margin: 0;">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
- <a href="{{ post.url | relative_url }}" class="cta-button" style="
- display: inline-block;
- background: #007BFF;
- color: white;
- padding: 0.5rem 1.5rem;
- border-radius: 4px;
- text-decoration: none;
- font-weight: bold;
- margin-top: 0.5rem;
- ">查看詳情</a>
- </div>
- </div>
- {% endfor %}
+    {% for post in site.posts %}
+    <div class="product-card">
+      <a class="card-thumb" href="{{ post.url | relative_url }}">
+        <img src="{% if post.image %}{{ post.image | replace: 'i.momoshop.com.tw', 'res.cloudinary.com/dplxqsfc1/image/fetch/w_600,f_auto,q_auto' }}{% endif %}"
+             alt="{{ post.title }}" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="card-meta">
+          <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+          {% if post.categories %}{{ post.categories | first }}{% endif %}
+        </div>
+        <h3 class="card-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <p class="card-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+      </div>
+    </div>
+    {% endfor %}
   </div>
 
   <div class="pagination">
@@ -106,8 +163,9 @@ layout: null
   </div>
 
   <script>
-    var ROWS_PER_PAGE = 10;
-    var rows = Array.from(document.getElementsByClassName("product-row"));
+    // 4欄×3列 = 每頁12張卡片
+    var ROWS_PER_PAGE = 12;
+    var rows = Array.from(document.getElementsByClassName("product-card"));
     var currentPage = 1;
     var searchActive = false;
 
@@ -126,9 +184,7 @@ layout: null
       var start = (page - 1) * ROWS_PER_PAGE;
       var end = start + ROWS_PER_PAGE;
 
-      // Hide all first
       rows.forEach(function(r){ r.style.display = "none"; });
-      // Show only visible ones for this page
       visible.slice(start, end).forEach(function(r){ r.style.display = ""; });
 
       var totalVisible = visible.length;
@@ -148,7 +204,6 @@ layout: null
       searchActive = (filter.length > 0);
 
       if (!searchActive) {
-        // Restore all, then show current page
         rows.forEach(function(r){ r.style.display = ""; });
         showPage(1);
         return;
@@ -156,17 +211,18 @@ layout: null
 
       var count = 0;
       rows.forEach(function(r) {
-        var title = r.getElementsByTagName("h3")[0];
-        var match = title.textContent.toUpperCase().indexOf(filter) > -1;
+        var title = r.getElementsByClassName("card-title")[0];
+        var excerpt = r.getElementsByClassName("card-excerpt")[0];
+        var match = (title && title.textContent.toUpperCase().indexOf(filter) > -1) ||
+                    (excerpt && excerpt.textContent.toUpperCase().indexOf(filter) > -1);
         r.style.display = match ? "" : "none";
         if (match) count++;
       });
 
-      // After search, show from page 1
       showPage(1);
     }
 
-    // Initialize
+    // 初始化
     showPage(1);
   </script>
 </body>
