@@ -26,7 +26,7 @@
 <body>
 
   <header class="site-header">
-    <div class="site-logo">AI 好物評價網 <span>評測・開箱・導購</span></div>
+    <a href="{{ site.baseurl | default: '/' }}/" class="site-logo-link">AI 好物評價網</a>
   </header>
 
   <nav class="breadcrumb" aria-label="麵包屑導航">
@@ -37,8 +37,6 @@
   </nav>
 
   <div class="post-layout">
-    <a href="{{ site.baseurl | default: '/' }}/" class="back-link">← 回首頁</a>
-
     <article>
       <header class="post-header">
         {% if page.category %}<span class="post-cat-tag">{{ page.category }}</span>{% endif %}

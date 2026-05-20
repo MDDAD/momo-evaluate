@@ -46,8 +46,13 @@ img { max-width: 100%; display: block; }
   top: 0;
   z-index: 100;
 }
-.site-logo { font-size: 1.1rem; font-weight: 700; color: var(--primary); }
-.site-logo span { color: var(--text); }
+.site-logo-link {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+.site-logo-link:hover { color: var(--primary-dark); }
 
 /* ===== Container ===== */
 .container {
@@ -151,9 +156,9 @@ img { max-width: 100%; display: block; }
 /* ===== Post Article ===== */
 .post-header { margin-bottom: 28px; }
 .post-title {
-  font-size: 1.65rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.25;
   margin-bottom: 12px;
 }
 .post-meta { font-size: 0.82rem; color: var(--text-light); margin-bottom: 6px; }
