@@ -46,12 +46,12 @@ layout: null
       transform: translateY(-2px);
     }
 
-    /* 16:9 圖片（與 yunique.cc 一樣） */
+    /* 正方形圖片（與 yunique.cc 一樣） */
     .card-thumb {
       display: block;
       position: relative;
       width: 100%;
-      padding-top: 56.25%; /* 16:9 */
+      padding-top: 100%; /* 正方形 1:1 */
       overflow: hidden;
       background: #f0f0f0;
     }
@@ -164,25 +164,26 @@ layout: null
 
   <div class="category-filter" id="categoryFilter">
     <button class="cat-btn active" data-cat="all">全部</button>
-    <button class="cat-btn" data-cat="3c">3C電子</button>
-    <button class="cat-btn" data-cat="life">生活用品</button>
-    <button class="cat-btn" data-cat="home">居家環境</button>
-    <button class="cat-btn" data-cat="kitchen">廚房家電</button>
-    <button class="cat-btn" data-cat="beauty">美妝保健</button>
+    <button class="cat-btn" data-cat="3C">3C</button>
+    <button class="cat-btn" data-cat="家電">家電</button>
+    <button class="cat-btn" data-cat="傢寢運動">傢寢運動</button>
+    <button class="cat-btn" data-cat="保健/食品">保健/食品</button>
+    <button class="cat-btn" data-cat="日用生活">日用生活</button>
+    <button class="cat-btn" data-cat="旅遊戶外">旅遊戶外</button>
+    <button class="cat-btn" data-cat="母嬰用品">母嬰用品</button>
+    <button class="cat-btn" data-cat="汽車用品">汽車用品</button>
+    <button class="cat-btn" data-cat="流行時尚">流行時尚</button>
+    <button class="cat-btn" data-cat="精品配飾">精品配飾</button>
   </div>
 
   <div id="productGrid">
     {% for post in site.posts %}
-    <div class="product-card" data-cat="{% if post.categories %}{{ post.categories | first }}{% else %}life{% endif %}">
+    <div class="product-card" data-cat="{% if post.category %}{{ post.category }}{% else %}3C{% endif %}">
       <a class="card-thumb" href="{{ post.url | relative_url }}">
-        <img src="{% if post.image %}{{ post.image | replace: 'i.momoshop.com.tw', 'res.cloudinary.com/dplxqsfc1/image/fetch/w_600,f_auto,q_auto' }}{% endif %}"
+        <img src="{% if post.image %}{% if post.image contains 'cloudinary.com' %}{{ post.image }}{% else %}{{ post.image | replace: 'i.momoshop.com.tw', 'res.cloudinary.com/dplxqsfc1/image/fetch/w_600,f_auto,q_auto' }}{% endif %}{% endif %}"
              alt="{{ post.title }}" loading="lazy">
       </a>
       <div class="card-body">
-        <div class="card-meta">
-          <time>{{ post.date | date: "%Y-%m-%d" }}</time>
-          {% if post.categories %}{{ post.categories | first }}{% endif %}
-        </div>
         <h3 class="card-title">
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </h3>
