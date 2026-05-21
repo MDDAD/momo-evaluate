@@ -1,5 +1,3 @@
----
----
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -22,11 +20,250 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ site.baseurl | default: '/' }}/assets/css/main.css">
+  <style>
+    :root {
+      --primary: #F59E0B;
+      --primary-dark: #D97706;
+      --accent: #EF4444;
+      --bg: #FFFBEB;
+      --card-bg: #FFFFFF;
+      --text: #1F2937;
+      --text-muted: #6B7280;
+      --border: #FDE68A;
+      --shadow: 0 2px 8px rgba(245,158,11,0.12);
+      --shadow-hover: 0 8px 24px rgba(245,158,11,0.22);
+      --radius: 14px;
+      --transition: 0.25s ease;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ===== Header ===== */
+    .site-header {
+      background: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding: 0 28px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-logo-link {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+    }
+    .site-logo-link span { color: var(--primary); }
+    .site-logo-link:hover { opacity: 0.9; }
+
+    /* ===== Breadcrumb ===== */
+    .breadcrumb {
+      background: #fff;
+      padding: 10px 24px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+    }
+    .breadcrumb a {
+      color: var(--primary-dark);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    /* ===== Post Layout ===== */
+    .post-layout {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem;
+      width: 100%;
+    }
+
+    /* ===== Post Header ===== */
+    .post-header { margin-bottom: 1.5rem; }
+    .post-cat-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      background: #FFFBEB;
+      border: 1px solid var(--border);
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .post-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .post-meta {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* ===== Back Link ===== */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--primary-dark); }
+
+    /* ===== Post Content ===== */
+    .post-content-wrap {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      font-size: 1.02rem;
+      border: 1px solid rgba(245,158,11,0.1);
+    }
+    .post-content-wrap h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 1.75rem 0 0.75rem;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--primary);
+      color: var(--text);
+    }
+    .post-content-wrap h3 {
+      font-size: 1.08rem;
+      font-weight: 600;
+      margin: 1.25rem 0 0.5rem;
+      color: var(--text);
+    }
+    .post-content-wrap p { margin-bottom: 1rem; line-height: 1.8; }
+    .post-content-wrap ul, .post-content-wrap ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5em;
+      line-height: 1.8;
+    }
+    .post-content-wrap li { margin-bottom: 4px; }
+    .post-content-wrap img {
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      margin: 1.25rem auto;
+      max-height: 480px;
+      object-fit: contain;
+    }
+    .post-content-wrap a {
+      color: var(--primary-dark);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .post-content-wrap a:hover { color: var(--primary); }
+    .post-content-wrap strong { font-weight: 700; color: var(--text); }
+
+    /* ===== Shop Button ===== */
+    .shop-link {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 2rem auto 0;
+      padding: 14px 24px;
+      background: var(--primary);
+      color: #fff !important;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-align: center;
+      border-radius: 50px;
+      box-shadow: 0 4px 14px rgba(245,158,11,0.32);
+      transition: var(--transition);
+      text-decoration: none !important;
+      letter-spacing: 0.02em;
+    }
+    .shop-link:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(245,158,11,0.42);
+    }
+
+    /* ===== Sponsor Section ===== */
+    .sponsor-section {
+      margin-top: 2.5rem;
+      padding: 2rem;
+      background: #fff;
+      border-radius: var(--radius);
+      text-align: center;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .sponsor-section h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+    .kofi-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #00b9fe, #0096CC);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(0,185,254,0.32);
+    }
+    .kofi-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,185,254,0.42);
+    }
+    .kofi-btn svg { width: 18px; height: 18px; }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      background: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.82rem;
+      color: #9CA3AF;
+      margin-top: auto;
+    }
+    .site-footer a { color: var(--primary); text-decoration: none; }
+    .site-footer a:hover { text-decoration: underline; }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 640px) {
+      .post-title { font-size: 1.65rem; }
+      .post-content-wrap { padding: 1.25rem 1rem; font-size: 1rem; }
+      .post-layout { padding: 1.25rem 0.75rem; }
+      .breadcrumb { padding: 10px 16px; font-size: 0.78rem; }
+      .sponsor-section { padding: 1.5rem 1rem; }
+    }
+  </style>
 </head>
 <body>
 
   <header class="site-header">
-    <a href="{{ site.baseurl | default: '/' }}/" class="site-logo-link">AI 好物評價網</a>
+    <a href="{{ site.baseurl | default: '/' }}/" class="site-logo-link">AI 好物<span>評價網</span></a>
   </header>
 
   <nav class="breadcrumb" aria-label="麵包屑導航">
@@ -37,6 +274,8 @@
   </nav>
 
   <div class="post-layout">
+    <a href="{{ site.baseurl | default: '/' }}/" class="back-link">← 返回首頁</a>
+
     <article>
       <header class="post-header">
         {% if page.category %}<span class="post-cat-tag">{{ page.category }}</span>{% endif %}
@@ -44,24 +283,22 @@
         {% if page.date %}<p class="post-meta">發布於 {{ page.date | date: "%Y/%m/%d" }}</p>{% endif %}
       </header>
 
-      <div class="post-content-inner">
-        <div class="post-content-wrap">
-          {{ content }}
-        </div>
+      <div class="post-content-wrap">
+        {{ content }}
       </div>
     </article>
 
     <div class="sponsor-section">
       <h3>💙 如果覺得評測有幫助，歡迎支持一下</h3>
       <a href="https://ko-fi.com/mddadsiwu" target="_blank" class="kofi-btn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2,21H20V19H2M20,8H18V5H20M20,3H4V13A4,4 0 0,0 8,17H14A4,4 0 0,0 18,13V10H20A2,2 0 0,0 22,8V5A2,2 0 0,0 20,3M13,17.5V15H8V17.5L12,21L13,17.5Z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2,21H20V19H2M20,8H18V5H20M20,3H4V13A4,4 0 0,0 8,17H14A4,4 0 0,0 18,13V10H20A2,2 0 0,0 22,8V5A2,2 0 0,0 20,3M13,17.5V15H8V17.5L12,21L13,17.5Z"/></svg>
         支持作者
       </a>
     </div>
   </div>
 
   <footer class="site-footer">
-    <p>AI 好物評價網 — 發現好物</p>
+    <p>© 2025 AI 好物評價網 · <a href="https://ko-fi.com/mddadsiwu" target="_blank">贊助</a></p>
   </footer>
 
 </body>

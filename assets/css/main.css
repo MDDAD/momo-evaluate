@@ -5,17 +5,17 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --primary: #f2801f;
-  --primary-dark: #d66a10;
-  --bg: #f7f5f2;
+  --primary: #F59E0B;
+  --primary-dark: #D97706;
+  --bg: #FFFBEB;
   --card-bg: #ffffff;
-  --text: #222222;
-  --text-secondary: #666666;
-  --text-light: #999999;
-  --border: #e8e4df;
-  --radius: 12px;
-  --shadow: 0 2px 12px rgba(0,0,0,0.07);
-  --shadow-hover: 0 6px 24px rgba(0,0,0,0.12);
+  --text: #1F2937;
+  --text-secondary: #6B7280;
+  --text-light: #9CA3AF;
+  --border: #FDE68A;
+  --radius: 14px;
+  --shadow: 0 2px 8px rgba(245,158,11,0.12);
+  --shadow-hover: 0 8px 24px rgba(245,158,11,0.22);
   --transition: 0.25s ease;
 }
 
