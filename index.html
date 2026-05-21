@@ -57,13 +57,6 @@ layout: null
       margin: 0;
     }
 
-    /* 讚助 bar */
-    .sponsor-bar {
-      background: #fff;
-      text-align: center;
-      padding: 14px 1rem;
-      border-bottom: 1px solid var(--border);
-    }
     .kofi-btn {
       display: inline-flex;
       align-items: center;
@@ -278,17 +271,10 @@ layout: null
     <p class="header-tagline">評測 ・ 開箱 ・ 導購 — 幫你快速找到適合的好物</p>
   </header>
 
-  <div class="sponsor-bar">
-    <a href="https://ko-fi.com/mddadsiwu" target="_blank" class="kofi-btn">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2,21H20V19H2M20,8H18V5H20M20,3H4V13A4,4 0 0,0 8,17H14A4,4 0 0,0 18,13V10H20A2,2 0 0,0 22,8V5A2,2 0 0,0 20,3M13,17.5V15H8V17.5L12,21L13,17.5Z"/></svg>
-      支持一下
-    </a>
-  </div>
-
   <div class="main-content">
     <input type="text" id="searchInput" onkeyup="onSearch()" placeholder="搜尋商品名稱...">
 
-  <div class="category-filter" id="categoryFilter">
+    <div class="category-filter" id="categoryFilter">
     <button class="cat-btn active" data-cat="all">全部</button>
     <button class="cat-btn" data-cat="3C">3C</button>
     <button class="cat-btn" data-cat="家電">家電</button>
@@ -327,7 +313,11 @@ layout: null
   </div><!-- end .main-content -->
 
   <footer class="site-footer">
-    <p>© 2025 AI 好物評價網 · <a href="https://ko-fi.com/mddadsiwu" target="_blank">贊助</a></p>
+    <a href="https://ko-fi.com/mddadsiwu" target="_blank" class="kofi-btn" style="margin-bottom:0.75rem;">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2,21H20V19H2M20,8H18V5H20M20,3H4V13A4,4 0 0,0 8,17H14A4,4 0 0,0 18,13V10H20A2,2 0 0,0 22,8V5A2,2 0 0,0 20,3M13,17.5V15H8V17.5L12,21L13,17.5Z"/></svg>
+      支持一下
+    </a>
+    <p>© 2025 AI 好物評價網</p>
   </footer>
 
   <script>
